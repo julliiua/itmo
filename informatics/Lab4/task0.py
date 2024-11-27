@@ -19,11 +19,11 @@ for line in lines:
 
     if not value:  # если объект пустой, то
         if key[0] == '-':
-            json_lines.append(' ' * 12 + f'"{key[2:]}": ' + '{')
+            json_lines.append(' ' * 12 + f'"{key[2:]}": ' + '\n' + ' '*12+'{')
         else:
             json_lines.append(' ' * 4 + f'"{key}":' + '\n' + ' ' * 8 + '{')
     else:
-        json_lines.append(' ' * 12 + f'"{key}": "{value}",')
+        json_lines.append(' ' * 16 + f'"{key}": "{value}",')
 
 json_lines[-1] = json_lines[-1][:-1]
 
@@ -32,5 +32,5 @@ with open('расписание.json', 'w', encoding='utf-8') as file:
     file.write('{\n')
     for line in json_lines:
         file.write(line + '\n')
-    for i in range(3):
+    for i in range(4):
         file.write('}' + '\n')
