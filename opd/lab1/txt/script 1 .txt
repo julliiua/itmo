@@ -1,0 +1,59 @@
+1.
+Общий скрипт
+bash script1.sh
+bash script2.sh
+bash script3.sh
+bash script4.sh
+bash script5.sh
+
+chmod -R 755 ~/lab0
+rm -R ~/lab0
+mkdir ~/lab0
+cd ~/lab0
+mkdir ~/lab0/combusken4
+cd ~/lab0/combusken4
+touch poliwrath
+echo "Способности Torrent Focus Damp Water
+Absorb" > poliwrath
+mkdir ~/lab0/combusken4/infernаре
+touch wormadam
+echo "Развитые способности Overcoat" > wormadam
+touch skorupі
+echo "Overland=6 Surface=2 Jump=2 Power=1 Intelligence=3" > skorupі
+mkdir ~/lab0/combusken4/magmar
+cd ..
+mkdir ~/lab0/meowth6
+cd ~/lab0/meowth6
+touch yanma
+echo "Возможности 
+Overland=4 Sky=8 Jump=2 Power=2 Intelligence=4 
+Sinker=0 " > yanma
+mkdir ~/lab0/meowth6/gible
+mkdir ~/lab0/meowth6/meganium
+cd ..
+touch purugly5
+echo "Развитые способности Кееn Eye Defiant " > purugly5
+mkdir ~/lab0/reuniclus9
+cd ~/lab0/reuniclus9
+touch doduo
+echo "Развитые способности Tangled Feet " > doduo 
+touch snorlax
+echo "Ходы After 
+You Block Covet Counter Covet Dynamicpunch Fire Punch Focus Punch Gunk 
+Shot Headbutt Hyper Voice Ice Punch Icy Wind Iron Head Last Resort 
+Mega Kick Mega Punch Metronome Mud-Slap Outrage Psych Up Recycle 
+Rollout Seismic Toss Seed Bomb Shock Wave Sleep Talk Snore Superpower 
+Thunderpunch Uproar Water Pulse Zen Headbutt" > snorlax
+touch venomoth
+echo "Тип диеты
+Herbivore" > venomoth
+mkdir ~/lab0/reuniclus9/mienfoo
+touch sunflora
+echo "Тип покемона GRASS NONE " > sunflora
+cd ..
+touch skitty8
+echo "satk=4 sdef=4 
+spd=5" > skitty8
+touch tympole7
+echo "Возможности Overland=4 Surfac=7 Underwater=6 Jump3=0 
+Power=1 Intelligence=4 Fountain=8" > tympole7

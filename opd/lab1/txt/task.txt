@@ -1,0 +1,59 @@
+combusken4 (каталог) |
+ +--poliwrath (файл) 
++--infernаре (каталог) 
++--wormadam (файл) 
++--skorupі (файл) | 
++--magmar (каталог) 
+
++--meowth6 (каталог) | 
++--yanma (файл) | 
++--gible (каталог) | 
++--meganium (каталог) 
+
++--purugly5 (файл) 
+
++--reuniclus9 (каталог)
++--doduo (файл) |
++--snorlax (файл) | 
++--venomoth (файл) 
++--mienfoo (каталог) | | 
++--sunflora (файл)
+ 
++--skitty8 (файл) 
+
++-- tympole7 (файл)
+
+poliwrath 
+wormadam 
+skorupi  
+yanma 763purugly5 
+doduo chmod 
+
+snorlax 
+
+venomoth 
+sunflora  
+skitty8 
+tympole7
+
+
+
+combusken4 524
+	poliwrath 600
+	infernape 770
+	wormadam 004
+	skorupi 640
+	magmar 512
+meowth6 363 763
+	yanma 006 706
+	gible 736
+	meganium 361
+purugly5 044
+reuniclus9 307 707
+	doduo 004
+	snorlax 664
+	venomoth 622
+	mienfoo 757
+	sunflora 620 720
+skitty8 400
+tympole7 600

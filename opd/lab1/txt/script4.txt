@@ -1,0 +1,32 @@
+4.
+cd ~/lab0
+ls -R | grep "a$" | wc -m | sort -r
+ls -Ral | sort -u 2>/tmp/error
+ls -n -d m* */m* */*m* 2>/tmp/error | grep "e$"  | sort
+ls -R | grep "^m"| wc -m >/tmp/res
+wc -m combusken4/wormadam >/tmp/res 2>/dev/null
+wc -m combusken4/skorupi >/tmp/res 2>/dev/null
+wc -m meowth6/yanma >/tmp/res 2>/dev/null
+wc -m reuniclus9/doduo >/tmp/res 2>/dev/null
+wc -m reuniclus9/snorlax >/tmp/res 2>/dev/null
+wc -m reuniclus9/venomoth >/tmp/res 2>/dev/null
+ls -d m* */m* */*m* 2>/tmp/error | grep "^m"  | sort -r
+
+cd lab0
+ls -R | grep "a$" | wc -m | sort -r
+echo -e "\n task1 : \n"
+ls -Ral | sort -u 2>/tmp/error
+echo -e "\n task2 : \n"
+ls -n -d m* */m* */*m* 2>/tmp/error | grep "e$"  | sort
+echo -e "\n task3 : \n"
+ls -R | grep "^m"| wc -m >/tmp/res
+echo -e "\n task4 : \n"
+wc -m combusken4/wormadam >/tmp/res 2>/dev/null
+wc -m combusken4/skorupi >/tmp/res 2>/dev/null
+wc -m meowth6/yanma >/tmp/res 2>/dev/null
+wc -m reuniclus9/doduo >/tmp/res 2>/dev/null
+wc -m reuniclus9/snorlax >/tmp/res 2>/dev/null
+wc -m reuniclus9/venomoth >/tmp/res 2>/dev/null
+echo -e "\n task5 : \n"
+ls -d m* */m* */*m* 2>/tmp/error | grep "^m"  | sort -r
+echo -e "\n task6 : \n"

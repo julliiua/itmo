@@ -1,0 +1,20 @@
+2.
+chmod 524 ~/lab0/combusken4
+chmod 600 ~/lab0/combusken4/poliwrath
+chmod 770 ~/lab0/combusken4/infernаре
+chmod 004 ~/lab0/combusken4/wormadam
+chmod 640 ~/lab0/combusken4/skorupі
+chmod 512 ~/lab0/combusken4/magmar
+chmod 363 ~/lab0/meowth6
+chmod 006 ~/lab0/meowth6/yanma
+chmod 736 ~/lab0/meowth6/gible
+chmod 361 ~/lab0/meowth6/meganium
+chmod 044 ~/lab0/purugly5
+chmod 307 ~/lab0/reuniclus9
+chmod 004 ~/lab0/reuniclus9/doduo
+chmod 664 ~/lab0/reuniclus9/snorlax
+chmod 622 ~/lab0/reuniclus9/venomoth
+chmod 757 ~/lab0/reuniclus9/mienfoo
+chmod 620 ~/lab0/reuniclus9/sunflora
+chmod 400 ~/lab0/skitty8
+chmod 600 ~/lab0/tympole7

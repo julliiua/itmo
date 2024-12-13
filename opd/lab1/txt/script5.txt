@@ -1,0 +1,26 @@
+Ошибки:
+rm: reuniclus9/snorlaxtympo*: No such file or directory
+rmdir: reuniclus9: Directory not empty
+rm: combusken4/magmar/: Permission denied
+
+-----------
+
+решение ошибок:
+chmod 700 reuniclus9
+chmod 307 reuniclus9
+chmod 700 reuniclus9
+chmod 777 combusken4
+
+--------------
+
+cd lab0
+rm -f purugly5
+rm -f reuniclus9/snorlaxcat
+rm Copy_*
+chmod 700 reuniclus9
+rm reuniclus9/snorlaxtympo*
+chmod 307 reuniclus9
+chmod 700 reuniclus9
+rm -d -r reuniclus9
+chmod 777 combusken4
+rm -d -r combusken4/magmar/

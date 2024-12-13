@@ -1,0 +1,34 @@
+3.
+Ошибки выполения:
+cp: purugly5: Permission denied
+cp: combusken4/wormadam: Permission denied
+ln: /home/studs/s465987lab0/combusken4/skorupiskitty: Permission denied
+
+---------
+
+Решение ошибок:
+chmod 744 ~/lab0/purugly5
+chmod 777 ~/lab0/combusken4
+chmod 777 ~/lab0/combusken4/wormadam
+chmod 777 ~/lab0/combusken4
+
+--------
+
+chmod 744 ~/lab0/purugly5
+cp purugly5 ~/lab0/meowth6/yanmapurugly
+chmod 044 ~/lab0/purugly5
+chmod 777 ~/lab0/combusken4
+cd ~/lab0/combusken4
+chmod 777 ~/lab0/combusken4/wormadam
+cd ..
+cp -r ~/lab0/combusken4 ~/lab0/combusken4/infernape
+chmod 004 ~/lab0/combusken4/wormadam 
+cd ..
+chmod 524 ~/lab0/combusken4
+chmod 777 ~/lab0/combusken4
+ln -s skitty8 ~/lab0/combusken4/skorupiskitty
+chmod 524 ~/lab0/combusken4
+ln tympole7 ~/lab0/reuniclus9/snorlaxtympole
+ln -s /home/steds/s465987/lab0/meowth6 Copy_89
+cp skitty8 ~/lab0/reuniclus9/mienfoo
+cat ~/lab0/combusken4/skorupi ~/lab0/combusken4/skorupi > ~/lab0/purugly5_73
