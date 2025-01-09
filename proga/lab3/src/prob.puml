@@ -23,20 +23,18 @@ package human {
       + addHealth(): void
       + getThings(): ArrayList<Thing>
       + addThing(thing): void
+      + setEmotion(Emotion): void
       + say(String): void
-      + isMale(): boolean
     }
     class Hero{
       + Hero(String,int,int,Emotion):
-      + decreaseHelth(int): void
-      + getEmotion(): Emotion
-      + setEmotion(Emotion): void
       + shake(Human): boolean
       + toString(): String
     }
     Hero --|>  Human
     class Worker{
       + Worker(String,int,int,Emotion):
+      -believe: boolean
       + getBelieve(): boolean
       + addWrite(Book): void
       + toString(): String
