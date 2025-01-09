@@ -1,7 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8760286d-1381-4465-860f-11e15d47828e" name="Changes" comment="" />
+    <list default="true" id="8760286d-1381-4465-860f-11e15d47828e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../dm/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../dm/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dm/.idea/dm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../dm/.idea/dm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dm/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dm/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dm/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dm/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dm/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dm/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dm/4karpov.md" beforeDir="false" afterPath="$PROJECT_DIR$/../dm/4karpov.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dm/4pastor.md" beforeDir="false" afterPath="$PROJECT_DIR$/../dm/4pastor.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/informatics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/informatics.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/.idea/Lab4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/.idea/Lab4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/create yaml.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/create yaml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/task0.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/task0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/task1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/task2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/task2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/task3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/task3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/task4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/task4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/task5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/task5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5/dop.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5/dop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5/dop3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5/dop3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matan/lab.f" beforeDir="false" afterPath="$PROJECT_DIR$/../matan/lab.f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../opd/lab1/txt/script 1 .txt" beforeDir="false" afterPath="$PROJECT_DIR$/../opd/lab1/txt/script 1 .txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../opd/lab1/txt/script 2 .txt" beforeDir="false" afterPath="$PROJECT_DIR$/../opd/lab1/txt/script 2 .txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../opd/lab1/txt/script3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../opd/lab1/txt/script3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../opd/lab1/txt/script4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../opd/lab1/txt/script4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../opd/lab1/txt/script5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../opd/lab1/txt/script5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../opd/lab1/txt/task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../opd/lab1/txt/task.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/lab2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/lab2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/res.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/res.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/attacks/AncientPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/attacks/AncientPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/attacks/CalmMind.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/attacks/CalmMind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/attacks/ChargeBeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/attacks/ChargeBeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/attacks/DoubleTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/attacks/DoubleTeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/attacks/EnergyBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/attacks/EnergyBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/attacks/FocusBlast.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/attacks/FocusBlast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/attacks/Meditate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/attacks/Meditate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/attacks/Psywave.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/attacks/Psywave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/attacks/Spark.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/attacks/Spark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/attacks/ThunderWave.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/attacks/ThunderWave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/attacks/Thunderbolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/attacks/Thunderbolt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/pokemons/Eelektrik.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/pokemons/Eelektrik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/pokemons/Eelektross.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/pokemons/Eelektross.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/pokemons/MimeJr.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/pokemons/MimeJr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/pokemons/MrMime.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/pokemons/MrMime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/pokemons/Sigilyph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/pokemons/Sigilyph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab2/src/pokemons/Tynamo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab2/src/pokemons/Tynamo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

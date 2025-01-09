@@ -1,0 +1,136 @@
+@startuml
+package human {
+    interface People << interface >> {
+      + getName(): String
+      + say(String): void
+    }
+
+    abstract class Human{
+      +Human(String, int, int, Emotion)
+      - name: String
+      - age: int
+      - power: int
+      - emotion: Emotion
+      - health: int
+      - things: ArrayList<Thing>
+      + hashCode(): int
+      + equals(Object): boolean
+      + getAge(): int
+      + getEmotion(): Emotion
+      + getName(): String
+      + getPower(): int
+      + getHealth(): int
+      + addHealth(): void
+      + getThings(): ArrayList<Thing>
+      + addThing(thing): void
+      + say(String): void
+      + isMale(): boolean
+    }
+    class Hero{
+      + Hero(String,int,int,Emotion):
+      + decreaseHelth(int): void
+      + getEmotion(): Emotion
+      + setEmotion(Emotion): void
+      + shake(Human): boolean
+      + toString(): String
+    }
+    Hero --|>  Human
+    class Worker{
+      + Worker(String,int,int,Emotion):
+      + getBelieve(): boolean
+      + addWrite(Book): void
+      + toString(): String
+      + giveThing(Human): void
+      + takeNote(Human): void
+    }
+    class Seller{
+      + Seller(String,int,int,Emotion):
+      - products: ArrayList<Food>
+      + food(): Food
+      + getProducts(): ArrayList<Food>
+
+
+    }
+    Seller --|> Human
+    class ZeroMoneyException {
+      + ZeroMoneyException(String):
+      + getMessage(): String
+    }
+    Worker --|>  Human
+
+}
+Human  ..|>  People
+package enums{
+    enum Emotion << enumeration >> {
+       - Emotion(String):
+       + DEFAULT:
+       + KIND:
+       + EVIL:
+       + ANGRY:
+       + getDescription(): String
+    }
+}
+package stories{
+    class SecondStory {
+      + SecondStory(Hero, Hero):
+      - firstActor: Hero
+      - secondActor: Hero
+      - storyName: String
+      + start(): void
+      + firstAction(): void
+      + secondAction(): void
+    }
+
+    class FirstStory {
+      + FirstStory(Hero, Hero):
+      - firstActor: Hero
+      - secondActor: Hero
+      - storyName: String
+      + secondAction(): void
+      + firstAction(): void
+      + start(): void
+    }
+
+    class Story {
+      + Story():
+      - storyName: String
+      + hashCode(): int
+      + toString(): String
+      + equals(Object): boolean
+      + start(): void
+    }
+}
+SecondStory         --|>  Story
+FirstStory          --|>  Story
+package thing{
+    class Book {
+       + Book(String, int):
+       - text: String
+       + getText(): String
+       + addText(): void
+    }
+    class Thing{
+       + Thing(String, int):
+       - thingName: String
+       - count: int
+       + getThingName(): String
+       + getCount(): int
+       + addCount(): void
+    }
+    Book --|> Thing
+    class Food << record >> {
+      + Food(String, int):
+      - price: int
+      - foodName: String
+      + foodName(): String
+      + price(): int
+    }
+}
+class Main {
+  + Main():
+  + main(String[]): void
+}
+
+Story o--- Human
+Thing ---* Human
+@enduml
