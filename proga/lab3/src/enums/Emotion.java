@@ -1,10 +1,10 @@
 package enums;
 
 public enum Emotion {
-    DEFAULT("Нормальный"),
-    KIND("Добрый" ),
-    EVIL("Злой"),
-    ANGRY("Гневный");
+    DEFAULT("нормальный"),
+    KIND("добрый" ),
+    EVIL("злой"),
+    ANGRY("гневный");
 
 
     private String description;

@@ -42,10 +42,17 @@ public abstract class Human implements People{
     }
 
     public void addHealh(int amount) {
-        if (amount > 0) {
-            this.healh += amount;
+        this.healh += amount;
             if (this.healh < 0) {
                 this.healh = 0;
+
+            }
+    }
+    public void addPower(int amount) {
+        if (amount > 0) {
+            this.power += amount;
+            if (this.power < 0) {
+                this.power = 0;
             }
 
         }
