@@ -38,7 +38,30 @@ public class MusicBand extends Element implements Validatable, Serializable {
         this.genre = genre;
         this.bestAlbum = bestAlbum;
     }
+    public static MusicBand fromArray(String[] data) {
+        try {
+            Long id = Long.parseLong(data[0]);
+            String name = data[1];
+            Coordinates coordinates = new Coordinates(data[2]);
+            int numberOfParticipants = Integer.parseInt(data[3]);
+            MusicGenre genre = data[4].equals("null") ? null : MusicGenre.valueOf(data[4]);
+            Album bestAlbum = data[5].equals("null") ? null : new Album(data[5]);
+            return new MusicBand(name, coordinates, numberOfParticipants, genre, bestAlbum);
+        } catch (Exception e) {
+            return null;
+        }
+    }
 
+    public static String[] toArray(MusicBand band) {
+        return new String[]{
+                band.id.toString(),
+                band.name,
+                band.coordinates.toString(),
+                String.valueOf(band.numberOfParticipants),
+                band.genre == null ? "null" : band.genre.toString(),
+                band.bestAlbum == null ? "null" : band.bestAlbum.toString()
+        };
+    }
     @Override
     public int getId() {
         return id.intValue();

@@ -29,8 +29,14 @@ public class Album implements Validatable {
         return true;
     }
 
+    public Album(String s) {
+        String[] parts = s.split(";");
+        this.name = parts[0];
+        this.sales = Double.parseDouble(parts[1]);
+    }
+
     @Override
     public String toString() {
-        return "Album:  name = "+ name+ "seles = " +sales;
+        return name + ";" + sales;
     }
 }

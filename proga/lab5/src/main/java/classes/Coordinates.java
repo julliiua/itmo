@@ -27,8 +27,14 @@ public class Coordinates implements Validatable {
         return true;
     }
 
+    public Coordinates(String s) {
+        String[] parts = s.split(";");
+        this.x = Double.parseDouble(parts[1]);
+        this.y = Integer.parseInt(parts[0]);
+    }
+
     @Override
     public String toString() {
-        return "x=" + x + "y=" + y;
+        return x + ";" + y;
     }
 }
