@@ -1,6 +1,6 @@
-package main.java.classes;
+package classes;
 
-import main.java.utility.Validatable;
+import utility.Validatable;
 
 /**
  * Класс, представляющий координаты музыкальной группы.
@@ -20,18 +20,23 @@ public class Coordinates implements Validatable {
         this.x = x;
         this.y = y;
     }
+    public double getX() {
+        return x;
+    }
 
+    public Integer getY() {
+        return y;
+    }
+    public static Coordinates fromString(String data) {
+        String[] parts = data.replace("(", "").replace(")", "").split(",");
+        return new Coordinates(Double.parseDouble(parts[0].trim()), Integer.parseInt(parts[1].trim()));
+    }
     @Override
     public boolean validate() {
         if (y == null || y <= -506) return false;
         return true;
     }
 
-    public Coordinates(String s) {
-        String[] parts = s.split(";");
-        this.x = Double.parseDouble(parts[1]);
-        this.y = Integer.parseInt(parts[0]);
-    }
 
     @Override
     public String toString() {

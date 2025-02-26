@@ -1,0 +1,12 @@
+add\Main.class
+classes\MusicBand.class
+utility\Console.class
+utility\Element.class
+classes\Coordinates.class
+utility\Validatable.class
+classes\Album.class
+classes\MusicGenre.class
+utility\Ask$AskBreak.class
+utility\Ask.class
+utility\DumpManager.class
+utility\StandardConsole.class

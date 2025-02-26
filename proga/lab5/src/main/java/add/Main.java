@@ -1,21 +1,42 @@
-package main.java.add;
+package add;
 
 
-import main.java.classes.*;
-import main.java.utility.*;
+import classes.*;
+import command.AddCommand;
+import manager.*;
+import utility.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Scanner;
+
 
 public class Main {
-    static List<MusicBand> musicBands = new ArrayList<>();
-
-    public static void main(String[] args) throws Ask.AskBreak {
+    public static void main(String[] args) {
         var console = new StandardConsole();
-        musicBands.add(Ask.askMusicBand(console, 100));
 
-        for (var band : musicBands) {
-            System.out.println(band);
+        String filePath = "collection.csv";
+
+        var dumpManager = new DumpManager(filePath, console);
+        var collectionManager = new CollectionManager(dumpManager);
+
+        if (!collectionManager.loadCollection()) {
+            console.println("Ошибка загрузки коллекции из файла. Проверьте данные.");
+        }
+
+        var commandManager = new CommandManager(console, collectionManager);
+        var runner = new Runner(console, commandManager);
+
+        console.println("Программа запущена. Введите команду:");
+        while (true) {
+            try {
+                runner.interactiveMode();
+            } catch (Exception e) {
+                console.println("Произошла ошибка: " + e.getMessage());
+                console.println("Попробуйте ввести команду заново.");
+            }
         }
     }
 }
+
+
+

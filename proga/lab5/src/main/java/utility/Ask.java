@@ -1,6 +1,6 @@
-package main.java.utility;
+package utility;
 
-import main.java.classes.*;
+import classes.*;
 
 import java.util.NoSuchElementException;
 
@@ -15,64 +15,79 @@ public class Ask {
                 name = console.readln().trim();
                 if (name.equals("exit")) throw new AskBreak();
                 if (!name.isEmpty()) break;
+                console.printError("название не может быть пустым.");
             }
 
-            var coordinates = askCoordinates(console);
-            var numberofparticipants = askNumberoOfParticipants(console);
-            var genre = askMusicGenre(console);
-            var album = askAlbum(console);
+            Coordinates coordinates = askCoordinates(console);
+            Integer numberOfParticipants = askNumberOfParticipants(console);
+            MusicGenre genre = askMusicGenre(console);
+            Album album = askAlbum(console);
 
-            return new MusicBand(name, coordinates, numberofparticipants, genre, album);
+            return new MusicBand(id, name, coordinates, numberOfParticipants, genre, album);
         } catch (NoSuchElementException | IllegalStateException e) {
-            console.printError("Ошибка чтения");
+            console.printError("чтения данных. Проверьте ввод и повторите попытку.");
             return null;
         }
     }
 
     public static Coordinates askCoordinates(Console console) throws AskBreak {
         try {
-            double x;
-            while (true) {
+            Double x = null;
+            while (x == null) {
                 console.print("Введите координату X: ");
                 var line = console.readln().trim();
                 if (line.equals("exit")) throw new AskBreak();
-                if (!line.isEmpty()) {
-                    try { x = Double.parseDouble(line); break; } catch (NumberFormatException e) { }
+                try {
+                    x = Double.parseDouble(line);
+                } catch (NumberFormatException e) {
+                    console.printError("X должно быть числом.");
                 }
             }
-            Integer y;
-            while (true) {
-                console.print("Введите координату Y (>-506): ");
+
+            Integer y = null;
+            while (y == null) {
+                console.print("Введите координату Y (должно быть > -506): ");
                 var line = console.readln().trim();
                 if (line.equals("exit")) throw new AskBreak();
-                if (!line.isEmpty()) {
-                    try {
-                        y = Integer.parseInt(line);
-                        if (y > -506) break;
-                    } catch (NumberFormatException e) { }
+                try {
+                    int tempY = Integer.parseInt(line);
+                    if (tempY > -506) {
+                        y = tempY;
+                    } else {
+                        console.printError("Y должно быть больше -506.");
+                    }
+                } catch (NumberFormatException e) {
+                    console.printError("Y должно быть целым числом.");
                 }
             }
+
             return new Coordinates(x, y);
         } catch (NoSuchElementException | IllegalStateException e) {
-            console.printError("Ошибка чтения");
+            console.printError(" чтения координат.");
             return null;
         }
     }
 
-    public static int askNumberoOfParticipants(Console console) throws AskBreak {
+    public static int askNumberOfParticipants(Console console) throws AskBreak {
         try {
-            int participants;
-            while (true) {
+            Integer participants = null;
+            while (participants == null) {
                 console.print("Введите количество участников (целое число): ");
                 var line = console.readln().trim();
                 if (line.equals("exit")) throw new AskBreak();
-                if (!line.isEmpty()) {
-                    try { participants = Integer.parseInt(line); break; } catch (NumberFormatException e) { }
+                try {
+                    participants = Integer.parseInt(line);
+                    if (participants <= 0) {
+                        console.printError("количество участников должно быть положительным числом.");
+                        participants = null;
+                    }
+                } catch (NumberFormatException e) {
+                    console.printError("введите целое число.");
                 }
             }
             return participants;
         } catch (NoSuchElementException | IllegalStateException e) {
-            console.printError("Ошибка чтения");
+            console.printError("чтения числа участников.");
             return 0;
         }
     }
@@ -80,18 +95,19 @@ public class Ask {
     public static MusicGenre askMusicGenre(Console console) throws AskBreak {
         try {
             MusicGenre genre = null;
-            while (true) {
-                console.print("Введите жанр (" + genre + "): ");
+            while (genre == null) {
+                console.print("Введите жанр (RAP, HIP_HOP, BLUES, POP, POST_PUNK): ");
                 var line = console.readln().trim();
                 if (line.equals("exit")) throw new AskBreak();
-                if (!line.isEmpty()) {
-                    try { genre = MusicGenre.valueOf(line.toUpperCase()); break; }
-                    catch (IllegalArgumentException e) { }
+                try {
+                    genre = MusicGenre.valueOf(line.toUpperCase());
+                } catch (IllegalArgumentException e) {
+                    console.printError("жанр должен быть одним из следующих: RAP, HIP_HOP, BLUES, POP, POST_PUNK.");
                 }
             }
             return genre;
         } catch (NoSuchElementException | IllegalStateException e) {
-            console.printError("Ошибка чтения");
+            console.printError("чтения жанра.");
             return null;
         }
     }
@@ -100,23 +116,27 @@ public class Ask {
         try {
             console.print("Введите название альбома: ");
             String name = console.readln().trim();
+            if (name.equals("exit")) throw new AskBreak();
+            if (name.isEmpty()) {
+                console.printError("название альбома не может быть пустым.");
+                return askAlbum(console);
+            }
+
             Double sales = null;
-            while (true) {
-                console.print("Введите количество продаж альбома: ");
+            while (sales == null) {
+                console.print("Введите количество продаж альбома (число): ");
                 var line = console.readln().trim();
                 if (line.equals("exit")) throw new AskBreak();
-                if (!line.isEmpty()) {
-                    try {
-                        sales = Double.parseDouble(line);
-                        break;
-                    } catch (NumberFormatException e) {
-                        console.printError("Ошибка: Введите число.");
-                    }
+                try {
+                    sales = Double.parseDouble(line);
+                } catch (NumberFormatException e) {
+                    console.printError("введите число.");
                 }
             }
-            return new Album(name,sales);
+
+            return new Album(name, sales);
         } catch (NoSuchElementException | IllegalStateException e) {
-            console.printError("Ошибка чтения");
+            console.printError("чтения данных об альбоме.");
             return null;
         }
     }

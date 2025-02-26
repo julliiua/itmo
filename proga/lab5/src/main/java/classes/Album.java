@@ -1,6 +1,6 @@
-package main.java.classes;
+package classes;
 
-import main.java.utility.Validatable;
+import utility.Validatable;
 
 /**
  * Класс, представляющий музыкальный альбом.
@@ -22,6 +22,18 @@ public class Album implements Validatable {
         this.sales = sales;
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public Double getSales() {
+        return sales;
+    }
+    public static Album fromString(String data) {
+        String[] parts = data.split(",");
+        return new Album(parts[0].trim(), (double) Integer.parseInt(parts[1].trim()));
+    }
     @Override
     public boolean validate() {
         if (name == null || name.isEmpty()) return false;
@@ -29,14 +41,8 @@ public class Album implements Validatable {
         return true;
     }
 
-    public Album(String s) {
-        String[] parts = s.split(";");
-        this.name = parts[0];
-        this.sales = Double.parseDouble(parts[1]);
-    }
-
     @Override
     public String toString() {
-        return name + ";" + sales;
+        return name + "; Продажи" + sales;
     }
 }

@@ -1,4 +1,4 @@
-package main.java.classes;
+package classes;
 
 /**
  * Перечисление, представляющее музыкальные жанры.
@@ -8,5 +8,9 @@ public enum MusicGenre {
     HIP_HOP,
     BLUES,
     POP,
-    POST_PUNK
+    POST_PUNK;
+
+    public String getGenreName() {
+        return this.name();
+    }
 }

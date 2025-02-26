@@ -1,4 +1,4 @@
-package main.java.utility;
+package utility;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -90,5 +90,15 @@ public class StandardConsole implements Console {
      */
     public void selectConsoleScanner() {
         fileScanner = null;
+    }
+
+    @Override
+    public void println(String message) {
+        System.out.println(message);
+    }
+
+    @Override
+    public void printError(String error) {
+        System.err.println(error);
     }
 }

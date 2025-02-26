@@ -1,4 +1,4 @@
-package main.java.utility;
+package utility;
 
 /**
  * Абстрактный класс для элементов коллекции.

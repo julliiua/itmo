@@ -1,4 +1,4 @@
-package main.java.utility;
+package utility;
 
 import java.util.Scanner;
 
@@ -16,4 +16,8 @@ public interface Console {
     String getPrompt();
     void selectFileScanner(Scanner obj);
     void selectConsoleScanner();
+
+    void println(String message);
+
+    void printError(String error);
 }
