@@ -43,6 +43,6 @@ public class Album implements Validatable {
 
     @Override
     public String toString() {
-        return name + "; Продажи" + sales;
+        return name + "; Продажи=" + sales;
     }
 }

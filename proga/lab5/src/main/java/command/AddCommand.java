@@ -35,7 +35,7 @@ public class AddCommand extends Command {
 
             if (a != null && a.validate()) {
                 collectionManager.add(a);
-                return new ExecutionResponse("MusicBand успешно добавлен!");
+                return new ExecutionResponse(true,"MusicBand успешно добавлен!");
             } else
                 return new ExecutionResponse(false, "Поля MusicBand не валидны! MusicBand не создан!");
         } catch (Ask.AskBreak e) {

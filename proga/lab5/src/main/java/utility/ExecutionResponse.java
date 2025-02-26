@@ -12,10 +12,6 @@ public class ExecutionResponse {
         this.message = message;
     }
 
-    public ExecutionResponse(String message) {
-        this(true, message);
-    }
-
     public boolean getExitCode() {
         return exitCode;
     }
@@ -24,7 +20,4 @@ public class ExecutionResponse {
         return message;
     }
 
-    public String toString() {
-        return exitCode + ";" + message;
-    }
 }

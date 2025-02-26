@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class CollectionManager {
-    private final PriorityQueue<MusicBand> collection = new PriorityQueue<>(Comparator.comparing(MusicBand::getName));
+    private PriorityQueue<MusicBand> collection = new PriorityQueue<>();
     private LocalDateTime lastInitTime;
     private LocalDateTime lastSaveTime;
     private final DumpManager dumpManager;
@@ -21,23 +21,26 @@ public class CollectionManager {
     }
 
     public LocalDateTime getLastInitTime() {
+
         return lastInitTime;
     }
-
     public LocalDateTime getLastSaveTime() {
         return lastSaveTime;
     }
-
+    //Позволяют получить время последней загрузки и сохранения.
 
     public int getFreeId() {
         return collection.stream().mapToInt(MusicBand::getId).max().orElse(0) + 1;
     }
+    // Возвращает первый свободный ID, который на 1 больше, чем максимальный ID в коллекции.
+    //Если коллекция пустая, то возвращает 1.
 
     public boolean add(MusicBand band) {
         if (containsId(band.getId())) return false;
         collection.add(band);
         return true;
     }
+    // Елси есть группа с таким id, то не добавляет
 
     public boolean update(MusicBand newBand) {
         if (!containsId(newBand.getId())) return false;
@@ -45,14 +48,18 @@ public class CollectionManager {
         collection.add(newBand);
         return true;
     }
+    // Если есть группа с таким id, то удаляет старую версию и добавляет новую
 
     public boolean remove(int id) {
         return collection.removeIf(band -> band.getId() == id);
     }
+    //Удаляет группу по id
 
     public boolean containsId(int id) {
         return collection.stream().anyMatch(band -> band.getId() == id);
     }
+    //Проверка на существцющий айди
+
     public MusicBand getById(int id) {
         for (MusicBand band : collection) {
             if (band.getId() == id) {
@@ -61,10 +68,10 @@ public class CollectionManager {
         }
         return null;
     }
+    // Поиск по id
 
     public boolean loadCollection() {
         try (BufferedReader br = new BufferedReader(new FileReader("collection.csv"))) {
-            collection.clear();
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
@@ -74,7 +81,7 @@ public class CollectionManager {
                         new Coordinates(Float.parseFloat(values[2]), Integer.parseInt(values[3])),
                         Integer.parseInt(values[5]),
                         MusicGenre.valueOf(values[6].trim().toUpperCase()),
-                        new Album(values[7], (double) Integer.parseInt(values[8]))
+                        new Album(values[7], Double.parseDouble(values[8]))
                 );
 
                 collection.add(band);
@@ -82,15 +89,16 @@ public class CollectionManager {
             lastInitTime = LocalDateTime.now();
             return true;
         } catch (IOException | NumberFormatException | ArrayIndexOutOfBoundsException e) {
-            System.out.println("Ошибка при загрузке коллекции: " + e.getMessage());
+            System.out.println(e.getMessage());
             return false;
         }
     }
 
     public void saveCollection() {
-        dumpManager.writeCollection(collection);
+        dumpManager.saveCollection(collection);
         lastSaveTime = LocalDateTime.now();
     }
+    //
     public PriorityQueue<MusicBand> getCollection() {
         return collection;
     }
@@ -104,7 +112,7 @@ public class CollectionManager {
 
         StringBuilder info = new StringBuilder();
         for (var band : collection) {
-            info.append(band).append("\n\n");
+            info.append(band).append("\n");
         }
         return info.toString().trim();
     }

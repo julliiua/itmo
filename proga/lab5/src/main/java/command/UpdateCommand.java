@@ -20,7 +20,7 @@ public class UpdateCommand extends Command {
     public ExecutionResponse apply(String argument) {
         if (argument.isEmpty()) {
             console.println("Введите ID элемента:");
-            argument = console.readln().trim();  // Читаем ввод пользователя
+            argument = console.readln().trim();
         }
 
         try {
@@ -35,7 +35,7 @@ public class UpdateCommand extends Command {
 
             if (newBand != null && newBand.validate()) {
                 collectionManager.update(newBand);
-                return new ExecutionResponse("Группа успешно обновлена!");
+                return new ExecutionResponse(true,"Группа успешно обновлена!");
             } else {
                 return new ExecutionResponse(false, "Некорректные данные. Обновление отменено.");
             }

@@ -26,6 +26,6 @@ public class HelpCommand extends Command {
         for (Command command : commandManager.getCommands().values()) {
             console.println("  " + command.getName() + " - " + command.getDescription());
         }
-        return new ExecutionResponse("Список команд выведен.");
+        return new ExecutionResponse(true,"Список команд выведен.");
     }
 }

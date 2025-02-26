@@ -34,6 +34,6 @@ public class InfoCommand extends Command {
 
         console.println(info.toString());
 
-        return new ExecutionResponse("Информация о коллекции выведена.");
+        return new ExecutionResponse(true,"Информация о коллекции выведена.");
     }
 }

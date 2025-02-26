@@ -23,6 +23,6 @@ public class SaveCommand extends Command {
         }
 
         collectionManager.saveCollection();
-        return new ExecutionResponse("Коллекция успешно сохранена!");
+        return new ExecutionResponse(true,"Коллекция успешно сохранена!");
     }
 }

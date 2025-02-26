@@ -27,14 +27,10 @@ public class Main {
         var runner = new Runner(console, commandManager);
 
         console.println("Программа запущена. Введите команду:");
-        while (true) {
-            try {
-                runner.interactiveMode();
-            } catch (Exception e) {
-                console.println("Произошла ошибка: " + e.getMessage());
-                console.println("Попробуйте ввести команду заново.");
-            }
-        }
+
+        runner.interactiveMode();
+
+
     }
 }
 

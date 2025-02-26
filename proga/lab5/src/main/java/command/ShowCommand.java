@@ -30,7 +30,7 @@ public class ShowCommand extends Command {
         PriorityQueue<MusicBand> bands = collectionManager.getCollection();
 
         if (bands.isEmpty()) {
-            return new ExecutionResponse("Коллекция пуста.");
+            return new ExecutionResponse(true, "Коллекция пуста.");
         }
 
         console.println("Элементы коллекции:");
@@ -38,6 +38,6 @@ public class ShowCommand extends Command {
             console.println(band);
         }
 
-        return new ExecutionResponse("Все элементы коллекции выведены.");
+        return new ExecutionResponse(true,"Все элементы коллекции выведены.");
     }
 }

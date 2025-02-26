@@ -37,11 +37,9 @@ public class Runner {
             String[] userCommand = {"", ""};
 
             while (true) {
-                console.prompt();
                 userCommand = (console.readln().trim() + " ").split(" ", 2);
                 userCommand[1] = userCommand[1].trim();
 
-                commandManager.addToHistory(userCommand[0]);
                 commandResponse = launchCommand(userCommand);
 
                 if (commandResponse.getMessage().equals("exit")) break;
@@ -146,7 +144,7 @@ public class Runner {
         } finally {
             scriptStack.remove(scriptStack.size() - 1);
         }
-        return new ExecutionResponse("");
+        return new ExecutionResponse(true, "");
     }
 
     /**
@@ -155,7 +153,7 @@ public class Runner {
      * @return Результат выполнения команды
      */
     private ExecutionResponse launchCommand(String[] userCommand) {
-        if (userCommand[0].isEmpty()) return new ExecutionResponse("");
+        if (userCommand[0].isEmpty()) return new ExecutionResponse(true, "");
 
         var command = commandManager.getCommands().get(userCommand[0]);
 
