@@ -1,12 +1,9 @@
 package manager;
 
-import classes.*;
+import models.*;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.PriorityQueue;
 
 public class CollectionManager {
     private PriorityQueue<MusicBand> collection = new PriorityQueue<>();
@@ -70,40 +67,20 @@ public class CollectionManager {
     }
     // Поиск по id
 
-    public boolean loadCollection() {
-        try (BufferedReader br = new BufferedReader(new FileReader("collection.csv"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] values = line.split(",");
-
-                MusicBand band = new MusicBand(
-                        values[1],
-                        new Coordinates(Float.parseFloat(values[2]), Integer.parseInt(values[3])),
-                        Integer.parseInt(values[5]),
-                        MusicGenre.valueOf(values[6].trim().toUpperCase()),
-                        new Album(values[7], Double.parseDouble(values[8]))
-                );
-
-                collection.add(band);
-            }
-            lastInitTime = LocalDateTime.now();
-            return true;
-        } catch (IOException | NumberFormatException | ArrayIndexOutOfBoundsException e) {
-            System.out.println(e.getMessage());
-            return false;
-        }
-    }
-
-    public void saveCollection() {
-        dumpManager.saveCollection(collection);
-        lastSaveTime = LocalDateTime.now();
-    }
-    //
     public PriorityQueue<MusicBand> getCollection() {
         return collection;
     }
     public int getSize() {
         return collection.size();
+    }
+
+    public boolean load() {
+        dumpManager.loadCollection(collection);
+        return true;
+    }
+
+    public void saveCollection() {
+        dumpManager.saveCollection(collection);
     }
 
     @Override

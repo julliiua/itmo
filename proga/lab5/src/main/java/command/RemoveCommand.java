@@ -1,6 +1,6 @@
 package command;
 
-import classes.MusicBand;
+import models.MusicBand;
 import manager.*;
 import utility.*;
 

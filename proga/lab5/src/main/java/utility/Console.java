@@ -10,11 +10,8 @@ public interface Console {
     void println(Object obj);
     String readln();
     boolean isCanReadln();
-    String getPrompt();
     void selectFileScanner(Scanner obj);
     void selectConsoleScanner();
-
     void println(String message);
-
     void printError(String error);
 }

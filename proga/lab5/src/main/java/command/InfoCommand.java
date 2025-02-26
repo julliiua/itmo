@@ -27,9 +27,6 @@ public class InfoCommand extends Command {
         info.append("Дата инициализации: ")
                 .append(collectionManager.getLastInitTime() != null ? collectionManager.getLastInitTime() : "Не инициализирована")
                 .append("\n");
-        info.append("Дата последнего сохранения: ")
-                .append(collectionManager.getLastSaveTime() != null ? collectionManager.getLastSaveTime() : "Не сохранялась")
-                .append("\n");
         info.append("Количество элементов: ").append(collectionManager.getSize());
 
         console.println(info.toString());

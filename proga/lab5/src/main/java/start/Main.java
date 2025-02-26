@@ -7,23 +7,27 @@ public class Main {
     public static void main(String[] args) {
         var console = new StandardConsole();
 
-        String filePath = "collection.csv";
+        String fileName = System.getenv("FILENAME");
 
-        var dumpManager = new DumpManager(filePath, console);
-        var collectionManager = new CollectionManager(dumpManager);
+        if (fileName == null || fileName.isEmpty()) {
+            System.out.println("Ошибка: переменная окружения FILENAME не задана.");
+            System.exit(1);
+        }
+        //Переменная окружения
 
-        if (!collectionManager.loadCollection()) {
+        DumpManager dumpManager = new DumpManager(fileName, console);
+        CollectionManager collectionManager = new CollectionManager(dumpManager);
+
+        if (!collectionManager.load()){
             console.println("Ошибка загрузки коллекции из файла. Проверьте данные.");
         }
 
         var commandManager = new CommandManager(console, collectionManager);
-        var runner = new add.Runner(console, commandManager);
+        var runner = new Runner(console, commandManager);
 
         console.println("Программа запущена. Введите команду:");
 
         runner.interactiveMode();
-
-
     }
 }
 

@@ -1,7 +1,10 @@
 package command;
 
 import manager.*;
+import models.MusicBand;
 import utility.*;
+
+import java.util.PriorityQueue;
 
 /**
  * Команда 'save'. Сохраняет коллекцию в файл.
@@ -9,6 +12,7 @@ import utility.*;
 public class SaveCommand extends Command {
     private final Console console;
     private final CollectionManager collectionManager;
+    private PriorityQueue<MusicBand> collection;
 
     public SaveCommand(Console console, CollectionManager collectionManager) {
         super("save", "сохранить коллекцию в файл");

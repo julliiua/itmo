@@ -3,7 +3,7 @@ package command;
 
 import manager.CollectionManager;
 import utility.*;
-import classes.MusicBand;
+import models.MusicBand;
 
 /**
  * Команда 'add'. Добавляет новый элемент в коллекцию.

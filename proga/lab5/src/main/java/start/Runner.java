@@ -114,7 +114,7 @@ public class Runner {
                     userCommand[1] = userCommand[1].trim();
                 }
 
-                executionOutput.append(console.getPrompt()).append(String.join(" ", userCommand)).append("\n");
+                //executionOutput.append(console.getPrompt()).append(String.join(" ", userCommand)).append("\n");
 
                 boolean shouldExecute = true;
                 if (userCommand[0].equals("execute_script")) {

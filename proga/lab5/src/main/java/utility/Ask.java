@@ -1,6 +1,6 @@
 package utility;
 
-import classes.*;
+import models.*;
 
 import java.util.NoSuchElementException;
 
@@ -55,9 +55,11 @@ public class Ask {
                         y = tempY;
                     } else {
                         console.printError("Y должно быть больше -506.");
+                        console.print("Введите координату Y (должно быть > -506): ");
                     }
                 } catch (NumberFormatException e) {
                     console.printError("Y должно быть целым числом.");
+                    console.print("Введите координату Y (должно быть > -506): ");
                 }
             }
 
@@ -80,9 +82,11 @@ public class Ask {
                     if (participants <= 0) {
                         console.printError("количество участников должно быть положительным числом.");
                         participants = null;
+                        console.print("Введите количество участников (целое число): ");
                     }
                 } catch (NumberFormatException e) {
                     console.printError("введите целое число.");
+                    console.print("Введите количество участников (целое число): ");
                 }
             }
             return participants;
@@ -103,6 +107,7 @@ public class Ask {
                     genre = MusicGenre.valueOf(line.toUpperCase());
                 } catch (IllegalArgumentException e) {
                     console.printError("жанр должен быть одним из следующих: RAP, HIP_HOP, BLUES, POP, POST_PUNK.");
+                    console.print("Введите жанр (RAP, HIP_HOP, BLUES, POP, POST_PUNK): ");
                 }
             }
             return genre;
@@ -119,7 +124,9 @@ public class Ask {
             if (name.equals("exit")) throw new AskBreak();
             if (name.isEmpty()) {
                 console.printError("название альбома не может быть пустым.");
+
                 return askAlbum(console);
+
             }
 
             Double sales = null;

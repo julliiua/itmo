@@ -1,11 +1,10 @@
 package command;
 
-import classes.MusicBand;
+import models.MusicBand;
 import manager.CollectionManager;
 import utility.Console;
 import utility.ExecutionResponse;
 
-import java.util.List;
 import java.util.PriorityQueue;
 
 /**

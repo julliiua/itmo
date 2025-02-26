@@ -64,12 +64,7 @@ public class StandardConsole implements Console {
     public void selectConsoleScanner() {
         fileScanner = null;
     }
-    /**
-     * @return prompt текущей консоли
-     */
-    public String getPrompt() {
-        return ">";
-    }
+
 
     @Override
     public void println(String message) {
@@ -78,6 +73,6 @@ public class StandardConsole implements Console {
 
     @Override
     public void printError(String error) {
-        System.err.println(error);
+        System.err.println("Ошибка: " + error);
     }
 }
