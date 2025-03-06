@@ -4,6 +4,8 @@ import models.MusicBand;
 import manager.*;
 import utility.*;
 
+import java.util.NoSuchElementException;
+
 public class RemoveCommand extends Command {
     private final Console console;
     private final CollectionManager collectionManager;
@@ -16,28 +18,37 @@ public class RemoveCommand extends Command {
 
     @Override
     public ExecutionResponse apply(String argument) {
-        if (argument.isEmpty()) {
+        while (argument.isEmpty()) {
             console.println("Введите ID элемента:");
             argument = console.readln().trim();
         }
 
-        try {
-            int id = Integer.parseInt(argument);
-            MusicBand oldBand = collectionManager.getById(id);
-            if (oldBand == null) {
-                return new ExecutionResponse(false, "Группа с таким ID не найдена.");
+        int id;
+        while (true) {
+            try {
+                id = Integer.parseInt(argument);
+                break;
+            } catch (NumberFormatException e) {
+                console.printError("Ошибка: ID должен быть числом. Попробуйте снова:");
+                argument = console.readln().trim();
             }
+        }
 
-            if (collectionManager.remove(id)) {
-                return new ExecutionResponse(true, "Группа с ID " + id + " удалена.");
-            }
-            else{
-            return new ExecutionResponse(false, "Некорректные данные. Обновление отменено.");
-            } }
-        catch(NumberFormatException e){
-            return new ExecutionResponse(false, "Некорректный ID. Введите число.");
+        MusicBand oldBand = collectionManager.getById(id);
+        if (oldBand == null) {
+            console.printError("Ошибка: Группа с ID " + id + " не найдена. Попробуйте снова.");
+            return apply("");
+        }
+
+        boolean removed = collectionManager.remove(id);
+        if (removed) {
+            return new ExecutionResponse(true, "Группа с ID " + id + " успешно удалена.");
+        } else {
+            console.printError("Ошибка: Не удалось удалить группу с ID " + id + ".");
+            return apply("");
         }
     }
 }
+
 
 

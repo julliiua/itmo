@@ -23,6 +23,10 @@ public class CommandManager {
         register(new ShowCommand(console, collectionManager));
         register(new InfoCommand(console,collectionManager));
         register(new SaveCommand(console, collectionManager));
+        register(new ClearCommand(console, collectionManager));
+        register(new ExitCommand(console));
+        register(new RemoveFirstCommand(console, collectionManager));
+        register(new RemoveHeadCommand(console, collectionManager));
     }
 
     public void register(Command command) {

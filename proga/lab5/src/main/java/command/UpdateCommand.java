@@ -18,32 +18,54 @@ public class UpdateCommand extends Command {
 
     @Override
     public ExecutionResponse apply(String argument) {
-        if (argument.isEmpty()) {
-            console.println("Введите ID элемента:");
+        while (argument.isEmpty()) {
+            console.println("Введите ID элемента для обновления:");
             argument = console.readln().trim();
         }
 
-        try {
-            int id = Integer.parseInt(argument);
-            MusicBand oldBand = collectionManager.getById(id);
-            if (oldBand == null) {
-                return new ExecutionResponse(false, "Группа с таким ID не найдена.");
+        int id;
+        while (true) {
+            try {
+                id = Integer.parseInt(argument);
+                break;
+            } catch (NumberFormatException e) {
+                console.printError("Ошибка: ID должен быть числом. Попробуйте снова:");
+                argument = console.readln().trim();
             }
-
-            console.println("Обновление группы с ID " + id);
-            MusicBand newBand = Ask.askMusicBand(console, id);
-
-            if (newBand != null && newBand.validate()) {
-                collectionManager.update(newBand);
-                return new ExecutionResponse(true,"Группа успешно обновлена!");
-            } else {
-                return new ExecutionResponse(false, "Некорректные данные. Обновление отменено.");
-            }
-        } catch (NumberFormatException e) {
-            return new ExecutionResponse(false, "Некорректный ID. Введите число.");
-        } catch (Ask.AskBreak e) {
-            return new ExecutionResponse(false, "Операция отменена.");
         }
+
+        MusicBand oldBand;
+        while (true) {
+            oldBand = collectionManager.getById(id);
+            if (oldBand != null) {
+                break;
+            }
+            console.printError("Ошибка: Группа с ID " + id + " не найдена. Введите корректный ID:");
+            argument = console.readln().trim();
+            try {
+                id = Integer.parseInt(argument);
+            } catch (NumberFormatException e) {
+                console.printError("Ошибка: ID должен быть числом. Попробуйте снова:");
+            }
+        }
+
+        console.println("Обновление группы с ID " + id);
+        MusicBand newBand;
+        while (true) {
+            try {
+                newBand = Ask.askMusicBand(console, id);
+                if (newBand != null && newBand.validate()) {
+                    break;
+                } else {
+                    console.printError("Ошибка: Некорректные данные. Повторите ввод.");
+                }
+            } catch (Ask.AskBreak e) {
+                return new ExecutionResponse(false, "...");
+            }
+        }
+
+        collectionManager.update(newBand);
+        return new ExecutionResponse(true, "Группа успешно обновлена!");
     }
 
 }

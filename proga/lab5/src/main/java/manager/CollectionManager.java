@@ -93,6 +93,9 @@ public class CollectionManager {
         }
         return info.toString().trim();
     }
+    public void clear() {
+        collection.clear();
+    }
 
 }
 

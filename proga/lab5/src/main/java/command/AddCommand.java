@@ -27,9 +27,6 @@ public class AddCommand extends Command {
     @Override
     public ExecutionResponse apply(String argument){
         try {
-            if (!argument.isEmpty()) return new ExecutionResponse(false,
-                    "Неправильное количество аргументов!\nИспользование: '" + getName() + "'");
-
             console.println("Создание нового MusicBand:");
             MusicBand a = Ask.askMusicBand(console, collectionManager.getFreeId());
 

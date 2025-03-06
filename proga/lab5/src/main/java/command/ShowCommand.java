@@ -5,6 +5,9 @@ import manager.CollectionManager;
 import utility.Console;
 import utility.ExecutionResponse;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.PriorityQueue;
 
 /**
@@ -33,10 +36,12 @@ public class ShowCommand extends Command {
         }
 
         console.println("Элементы коллекции:");
-        for (MusicBand band : bands) {
+        List<MusicBand> sortedBands = new ArrayList<>(bands);
+        Collections.sort(sortedBands);
+
+        for (MusicBand band : sortedBands) {
             console.println(band);
         }
-
         return new ExecutionResponse(true,"Все элементы коллекции выведены.");
     }
 }
