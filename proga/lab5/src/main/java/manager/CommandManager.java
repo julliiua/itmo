@@ -20,6 +20,7 @@ public class CommandManager {
         register(new UpdateCommand(console, collectionManager));
         register(new RemoveCommand(console, collectionManager));
         register(new HelpCommand(console, this));
+        // this потому что должен видеть список всех зарегестрированных комманд
         register(new ShowCommand(console, collectionManager));
         register(new InfoCommand(console,collectionManager));
         register(new SaveCommand(console, collectionManager));
@@ -27,6 +28,12 @@ public class CommandManager {
         register(new ExitCommand(console));
         register(new RemoveFirstCommand(console, collectionManager));
         register(new RemoveHeadCommand(console, collectionManager));
+        register(new SumOfNumberOfParticipantsCommand(console, collectionManager));
+        register(new ExecuteScriptCommand(console, this));
+        register(new AddIfMinCommand(console, collectionManager));
+        register(new FilterLessThanBestAlbumCommand(console,collectionManager));
+        register(new PrintDescendingCommand(console,collectionManager));
+
     }
 
     public void register(Command command) {

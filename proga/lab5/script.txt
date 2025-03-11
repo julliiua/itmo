@@ -1,0 +1,22 @@
+help 678
+remove_first
+add
+Beg
+10
+10
+3
+pop
+topik
+10000
+show
+sum_of_number_of_participants
+add_if_min
+BigBob
+15
+15
+6
+rap
+BOO
+300
+show
+exit

@@ -5,7 +5,8 @@ import models.*;
 import java.util.NoSuchElementException;
 
 public class Ask {
-    public static class AskBreak extends Exception {}
+    public static class AskBreak extends Exception {
+    }
 
     public static MusicBand askMusicBand(Console console, int id) throws AskBreak {
         try {
@@ -146,5 +147,23 @@ public class Ask {
             console.printError("чтения данных об альбоме.");
             return null;
         }
+    }
+
+    public static Album askBestAlbum(Console console) throws AskBreak {
+        try {
+            console.print("Введите название альбома: ");
+            String name = console.readln().trim();
+            if (name.equals("exit")) throw new AskBreak();
+            if (name.isEmpty()) {
+                console.printError("название альбома не может быть пустым.");
+
+                return askBestAlbum(console);
+            }
+            return new Album(name, 1.0);
+        } catch (NoSuchElementException | IllegalStateException e) {
+            console.printError("чтения данных об альбоме.");
+            return null;
+        }
+
     }
 }

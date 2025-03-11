@@ -40,6 +40,13 @@ public class Album implements Validatable {
         if (sales == null || sales <= 0) return false;
         return true;
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Album album = (Album) obj;
+        return name.equals(album.name);
+    }
 
     @Override
     public String toString() {

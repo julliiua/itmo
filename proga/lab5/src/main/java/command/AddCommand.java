@@ -18,11 +18,6 @@ public class AddCommand extends Command {
         this.collectionManager = collectionManager;
     }
 
-    /**
-     * Выполняет команду
-     * @return Успешность выполнения команды и сообщение об успешности.
-     */
-
 
     @Override
     public ExecutionResponse apply(String argument){

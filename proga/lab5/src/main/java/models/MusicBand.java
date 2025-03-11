@@ -56,37 +56,6 @@ public class MusicBand extends Element implements Validatable, Serializable {
         this.bestAlbum = bestAlbum;
         if (id > lastId) lastId = id;
     }
-    /**
-     * Метод для создания объекта из массива строк (чтение CSV).
-     */
-    public static MusicBand fromArray(String[] data) {
-        try {
-            int id = Integer.parseInt(data[0]);
-            String name = data[1];
-            Coordinates coordinates = Coordinates.fromString(data[2]);
-            int numberOfParticipants = Integer.parseInt(data[3]);
-            MusicGenre genre = data[4].equals("null") ? null : MusicGenre.valueOf(data[4]);
-            Album bestAlbum = data[5].equals("null") ? null : new Album(data[5], (double) Integer.parseInt(data[6]));
-            return new MusicBand(id, name, coordinates, numberOfParticipants, genre, bestAlbum);
-        } catch (Exception e) {
-            return null;
-        }
-    }
-
-    /**
-     * Преобразование объекта в массив строк (запись CSV).
-     */
-    public static String[] toArray(MusicBand band) {
-        return new String[]{
-                String.valueOf(band.id),
-                band.name,
-                band.coordinates.toString(),
-                String.valueOf(band.numberOfParticipants),
-                band.genre == null ? "null" : band.genre.toString(),
-                band.bestAlbum == null ? "null" : band.bestAlbum.getName(),
-                band.bestAlbum == null ? "null" : String.valueOf(band.bestAlbum.getSales())
-        };
-    }
     public int getId() {
         return id;
     }
@@ -111,7 +80,9 @@ public class MusicBand extends Element implements Validatable, Serializable {
     public int compareTo(Element element) {
         return Integer.compare(this.getId(), element.getId());
     }
-
+    public int compareBySales(MusicBand other) {
+        return this.bestAlbum.getSales().compareTo(other.bestAlbum.getSales());
+    }
     @Override
     public boolean validate() {
         if (id <= 0) {

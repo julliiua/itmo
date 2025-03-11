@@ -1,7 +1,7 @@
 package command;
 
-import models.MusicBand;
 import manager.CollectionManager;
+import models.MusicBand;
 import utility.Console;
 import utility.ExecutionResponse;
 
@@ -11,14 +11,15 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 /**
- * Команда 'show'. Выводит в стандартный поток вывода все элементы коллекции в строковом представлении.
+ * Команда 'print_descending'.
+ * Выводит элементы коллекции в порядке убывания по id.
  */
-public class ShowCommand extends Command {
+public class PrintDescendingCommand extends Command {
     private final Console console;
     private final CollectionManager collectionManager;
 
-    public ShowCommand(Console console, CollectionManager collectionManager) {
-        super("show", "вывести в стандартный поток вывода все элементы коллекции в строковом представлении");
+    public PrintDescendingCommand(Console console, CollectionManager collectionManager) {
+        super("print_descending", "вывести элементы коллекции в порядке убывания по id");
         this.console = console;
         this.collectionManager = collectionManager;
     }
@@ -26,7 +27,7 @@ public class ShowCommand extends Command {
     @Override
     public ExecutionResponse apply(String argument) {
         if (!argument.isEmpty()) {
-            return new ExecutionResponse(false, "Команда 'show' не принимает аргументы!");
+            return new ExecutionResponse(false, "Команда 'print_descending' не принимает аргументы!");
         }
 
         PriorityQueue<MusicBand> bands = collectionManager.getCollection();
@@ -45,6 +46,7 @@ public class ShowCommand extends Command {
         for (MusicBand band : sortedBands) {
             console.println(band);
         }
-        return new ExecutionResponse(true,"Все элементы коллекции выведены.");
+       return new ExecutionResponse(true, "Все элементы коллекции выведены в порядке убывания по id.");
     }
 }
+
