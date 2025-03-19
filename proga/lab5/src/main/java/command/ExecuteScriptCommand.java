@@ -39,18 +39,6 @@ public class ExecuteScriptCommand extends Command {
 
         try (Scanner scriptScanner = new Scanner(scriptFile)) {
             console.selectFileScanner(scriptScanner);
-            while (scriptScanner.hasNextLine()) {
-                String line = scriptScanner.nextLine().trim();
-                if (!line.isEmpty()) {
-                    String[] commandParts = (line + " ").split(" ", 2);
-                    commandParts[1] = commandParts[1].trim();
-                    ExecutionResponse response = commandManager.getCommands()
-                            .getOrDefault(commandParts[0], new UnknownCommand(commandParts[0]))
-                            .apply(commandParts[1]);
-                    console.println(response.getMessage());
-                }
-            }
-            console.selectConsoleScanner();
             return new ExecutionResponse(true, "Скрипт выполнен успешно.");
         } catch (FileNotFoundException e) {
             return new ExecutionResponse(false, "Ошибка: Файл '" + argument + "' не найден.");

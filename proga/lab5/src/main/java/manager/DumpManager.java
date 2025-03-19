@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
-
+// отвечает за загрузку
 public class DumpManager {
     private final String fileName;
     private final Console console;

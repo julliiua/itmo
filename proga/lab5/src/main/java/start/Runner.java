@@ -59,32 +59,19 @@ public class Runner {
      * @return Можно ли продолжить выполнение скрипта
      */
     private boolean checkRecursion(String scriptFile, Scanner scriptScanner) {
-        int recursionStart = -1;
-        int i = 0;
+        int recursionCount = 0;
         for (String script : scriptStack) {
-            i++;
             if (scriptFile.equals(script)) {
-                if (recursionStart < 0) recursionStart = i;
-                if (recursionDepth < 0) {
-                    console.selectConsoleScanner();
-                    console.println("Обнаружена рекурсия! Введите максимальную глубину (0..500)");
-                    while (recursionDepth < 0 || recursionDepth > 500) {
-                        try {
-                            console.print("> ");
-                            recursionDepth = Integer.parseInt(console.readln().trim());
-                        } catch (NumberFormatException e) {
-                            console.println("Некорректный ввод, попробуйте еще раз.");
-                        }
-                    }
-                    console.selectFileScanner(scriptScanner);
-                }
-                if (i > recursionStart + recursionDepth || i > 500) {
+                recursionCount++;
+                if (recursionCount > 2) {
+                    console.println("Рекурсия выполняется больше 2 раз. Прерываем выполнение.");
                     return false;
                 }
             }
         }
         return true;
     }
+
 
     /**
      * Выполняет команды из скрипта.

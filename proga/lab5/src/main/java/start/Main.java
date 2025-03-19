@@ -26,7 +26,6 @@ public class Main {
         var runner = new Runner(console, commandManager);
 
         console.println("Программа запущена. Введите команду:");
-
         runner.interactiveMode();
     }
 }

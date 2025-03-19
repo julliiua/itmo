@@ -1,5 +1,4 @@
-help 678
-remove_first
+show
 add
 Beg
 10
@@ -8,15 +7,4 @@ Beg
 pop
 topik
 10000
-show
-sum_of_number_of_participants
-add_if_min
-BigBob
-15
-15
-6
-rap
-BOO
-300
-show
-exit
+execute_script script1.txt

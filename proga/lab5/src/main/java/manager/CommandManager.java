@@ -42,6 +42,7 @@ public class CommandManager {
     //Записывает команды Map
 
     public Map<String, Command> getCommands() {
+
         return commands;
     }
     //Возвращает все доступные команды
