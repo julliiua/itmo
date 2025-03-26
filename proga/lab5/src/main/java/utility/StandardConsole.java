@@ -55,6 +55,7 @@ public class StandardConsole implements Console {
      * @param scanner Новый Scanner для чтения данных из файла.
      */
     public void selectFileScanner(Scanner scanner) {
+
         fileScanner = scanner;
     }
 

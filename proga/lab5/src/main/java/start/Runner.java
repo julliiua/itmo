@@ -16,12 +16,9 @@ public class Runner {
     private final Console console;
     private final CommandManager commandManager;
     private final List<String> scriptStack = new ArrayList<>();
-    private int recursionDepth = -1;
 
     /**
-     * Конструктор Runner.
-     * @param console         Объект для работы с вводом/выводом
-     * @param commandManager  Менеджер команд
+     * Конструктор Runner
      */
     public Runner(Console console, CommandManager commandManager) {
         this.console = console;
@@ -29,7 +26,7 @@ public class Runner {
     }
 
     /**
-     * Интерактивный режим работы.
+     * Интерактивный режим работы
      */
     public void interactiveMode() {
         try {
@@ -42,7 +39,6 @@ public class Runner {
 
                 commandResponse = launchCommand(userCommand);
 
-                if (commandResponse.getMessage().equals("exit")) break;
                 console.println(commandResponse.getMessage());
             }
         } catch (NoSuchElementException e) {
@@ -53,18 +49,15 @@ public class Runner {
     }
 
     /**
-     * Проверяет рекурсию при выполнении скриптов.
-     * @param scriptFile Имя скрипта
-     * @param scriptScanner Scanner для работы с файлом
-     * @return Можно ли продолжить выполнение скрипта
+     * Проверяет рекурсию при выполнении скриптов
      */
     private boolean checkRecursion(String scriptFile, Scanner scriptScanner) {
         int recursionCount = 0;
         for (String script : scriptStack) {
             if (scriptFile.equals(script)) {
                 recursionCount++;
-                if (recursionCount > 2) {
-                    console.println("Рекурсия выполняется больше 2 раз. Прерываем выполнение.");
+                if (recursionCount > 0) {
+                    console.println("Рекурсия выполняется больше 1 раза. Прерываем выполнение.");
                     return false;
                 }
             }
@@ -74,7 +67,7 @@ public class Runner {
 
 
     /**
-     * Выполняет команды из скрипта.
+     * Выполняет команды из скрипта
      * @param scriptFile Имя файла скрипта
      * @return Результат выполнения команд
      */
@@ -100,8 +93,6 @@ public class Runner {
                     userCommand = (console.readln().trim() + " ").split(" ", 2);
                     userCommand[1] = userCommand[1].trim();
                 }
-
-                //executionOutput.append(console.getPrompt()).append(String.join(" ", userCommand)).append("\n");
 
                 boolean shouldExecute = true;
                 if (userCommand[0].equals("execute_script")) {

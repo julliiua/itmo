@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e40f71c9-5a99-4fee-91c2-f91c81e58ce7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/elagin.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/script1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/script1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/AddIfMinCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/Describable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/Describable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/Executable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/Executable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/ExecuteScriptCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/FilterLessThanBestAlbumCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/FilterLessThanBestAlbumCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/PrintDescendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/PrintDescendingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/RemoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/RemoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/RemoveFirstCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/RemoveFirstCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/RemoveHeadCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/RemoveHeadCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/SaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/SumOfNumberOfParticipantsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/SumOfNumberOfParticipantsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/command/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/manager/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/manager/CollectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/manager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/manager/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/src/main/java/utility/ExecutionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/src/main/java/utility/ExecutionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proga/lab5/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../proga/lab5/target/maven-archiver/pom.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2uXjCalDWG6sOmxPT049VCzX8nD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/yelagin_map"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e40f71c9-5a99-4fee-91c2-f91c81e58ce7" name="Changes" comment="" />
+      <created>1742401687276</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742401687276</updated>
+    </task>
+    <servers />
+  </component>
+</project>
