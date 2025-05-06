@@ -1,18 +1,33 @@
-package manager;
+package julliiua.lab6.server.managers;
 
-import models.*;
+
+import julliiua.lab6.common.models.MusicBand;
+import julliiua.lab6.common.utility.ExecutionResponse;
 
 import java.time.LocalDateTime;
 import java.util.PriorityQueue;
 
 public class CollectionManager {
     private PriorityQueue<MusicBand> collection = new PriorityQueue<>();
+    private static volatile CollectionManager instance;
     private LocalDateTime lastInitTime;
-    private final DumpManager dumpManager;
+    private LocalDateTime lastSaveTime;
+    private DumpManager dumpManager;
 
-    public CollectionManager(DumpManager dumpManager) {
+    public CollectionManager() {
         this.lastInitTime = null;
-        this.dumpManager = dumpManager;
+        this.dumpManager = DumpManager.getInstance();
+    }
+
+    public static CollectionManager getInstance() {
+        if (instance == null) {
+            synchronized (CollectionManager.class) {
+                if (instance == null) {
+                    instance = new CollectionManager();
+                }
+            }
+        }
+        return instance;
     }
 
     public LocalDateTime getLastInitTime() {
@@ -64,17 +79,22 @@ public class CollectionManager {
     public PriorityQueue<MusicBand> getCollection() {
         return collection;
     }
+
     public int getSize() {
         return collection.size();
     }
 
-    public boolean load() {
-            dumpManager.loadCollection(collection);
-        return true;
+    public ExecutionResponse load() {
+        dumpManager.loadCollection(collection);
+        lastInitTime = LocalDateTime.now();
+        return new ExecutionResponse(true, "OK");
     }
 
     public void saveCollection() {
-        dumpManager.saveCollection(collection);
+        if (!collection.isEmpty()) {
+            dumpManager.saveCollection(collection);
+            LocalDateTime lastSaveTime = LocalDateTime.now();
+        }
     }
 
     @Override
@@ -82,17 +102,14 @@ public class CollectionManager {
         if (collection.isEmpty()) return "Коллекция пуста!";
 
         StringBuilder info = new StringBuilder();
-        for (var band : collection) {
+        for (MusicBand band : collection) {
             info.append(band).append("\n");
         }
         return info.toString().trim();
     }
+
     public void clear() {
         collection.clear();
     }
-
-
-
 }
-
-
+    
