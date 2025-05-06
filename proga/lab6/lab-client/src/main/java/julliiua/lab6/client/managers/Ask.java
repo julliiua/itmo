@@ -1,14 +1,31 @@
-package utility;
+package julliiua.lab6.client.managers;
 
-import models.*;
-
+import julliiua.lab6.common.models.MusicBand;
+import julliiua.lab6.client.utility.Console;
 import java.util.NoSuchElementException;
+
+import julliiua.lab6.common.models.*;
 
 public class Ask {
     public static class AskBreak extends Exception {
     }
-
-    public static MusicBand askMusicBand(Console console, int id) throws AskBreak {
+    /**
+     * Исключение, выбрасываемое для прерывания ввода.
+     */
+    public static class Breaker extends Exception { }
+    /**
+     * Исключение, выбрасываемое при некорректном вводе.
+     */
+    public static class IllegalInputException extends IllegalArgumentException {
+        /**
+         * Конструктор исключения с сообщением.
+         * @param message Сообщение об ошибке.
+         */
+        public IllegalInputException(String message) {
+            super(message);
+        }
+    }
+    public static MusicBand askMusicBand(Console console, Long id) throws AskBreak {
         try {
             String name;
             while (true) {
@@ -18,13 +35,12 @@ public class Ask {
                 if (!name.isEmpty()) break;
                 console.printError("название не может быть пустым.");
             }
-
             Coordinates coordinates = askCoordinates(console);
             Integer numberOfParticipants = askNumberOfParticipants(console);
             MusicGenre genre = askMusicGenre(console);
             Album album = askAlbum(console);
 
-            return new MusicBand(id, name, coordinates, numberOfParticipants, genre, album);
+            return new MusicBand(name, coordinates, numberOfParticipants, genre, album);
         } catch (NoSuchElementException | IllegalStateException e) {
             console.printError("чтения данных. Проверьте ввод и повторите попытку.");
             return null;
@@ -36,7 +52,7 @@ public class Ask {
             Double x = null;
             while (x == null) {
                 console.print("Введите координату X: ");
-                var line = console.readln().trim();
+                String line = console.readln().trim();
                 if (line.equals("exit")) throw new AskBreak();
                 try {
                     x = Double.parseDouble(line);
@@ -48,7 +64,7 @@ public class Ask {
             Integer y = null;
             while (y == null) {
                 console.print("Введите координату Y (должно быть > -506): ");
-                var line = console.readln().trim();
+                String line = console.readln().trim();
                 if (line.equals("exit")) throw new AskBreak();
                 try {
                     int tempY = Integer.parseInt(line);
@@ -74,7 +90,7 @@ public class Ask {
             Integer participants = null;
             while (participants == null) {
                 console.print("Введите количество участников (целое число): ");
-                var line = console.readln().trim();
+                String line = console.readln().trim();
                 if (line.equals("exit")) throw new AskBreak();
                 try {
                     participants = Integer.parseInt(line);
@@ -98,7 +114,7 @@ public class Ask {
             MusicGenre genre = null;
             while (genre == null) {
                 console.print("Введите жанр (RAP, HIP_HOP, BLUES, POP, POST_PUNK): ");
-                var line = console.readln().trim();
+                String line = console.readln().trim();
                 if (line.equals("exit")) throw new AskBreak();
                 try {
                     genre = MusicGenre.valueOf(line.toUpperCase());
@@ -129,7 +145,7 @@ public class Ask {
             Double sales = null;
             while (sales == null) {
                 console.print("Введите количество продаж альбома (число): ");
-                var line = console.readln().trim();
+                String line = console.readln().trim();
                 if (line.equals("exit")) throw new AskBreak();
                 try {
                     sales = Double.parseDouble(line);

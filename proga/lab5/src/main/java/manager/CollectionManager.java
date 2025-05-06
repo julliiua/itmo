@@ -8,12 +8,10 @@ import java.util.PriorityQueue;
 public class CollectionManager {
     private PriorityQueue<MusicBand> collection = new PriorityQueue<>();
     private LocalDateTime lastInitTime;
-    private LocalDateTime lastSaveTime;
     private final DumpManager dumpManager;
 
     public CollectionManager(DumpManager dumpManager) {
         this.lastInitTime = null;
-        this.lastSaveTime = null;
         this.dumpManager = dumpManager;
     }
 
@@ -21,10 +19,6 @@ public class CollectionManager {
 
         return lastInitTime;
     }
-    public LocalDateTime getLastSaveTime() {
-        return lastSaveTime;
-    }
-    //Позволяют получить время последней загрузки и сохранения.
 
     public int getFreeId() {
         return collection.stream().mapToInt(MusicBand::getId).max().orElse(0) + 1;

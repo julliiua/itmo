@@ -32,14 +32,17 @@ public class Runner {
         try {
             ExecutionResponse commandResponse;
             String[] userCommand = {"", ""};
+            boolean exitComm = true;
 
-            while (true) {
+            while (exitComm) {
                 userCommand = (console.readln().trim() + " ").split(" ", 2);
                 userCommand[1] = userCommand[1].trim();
 
                 commandResponse = launchCommand(userCommand);
 
                 console.println(commandResponse.getMessage());
+                if (commandResponse.getMessage().equals("exit"))
+                    exitComm = false;
             }
         } catch (NoSuchElementException e) {
             console.printError("Пользовательский ввод не обнаружен!");
@@ -51,15 +54,11 @@ public class Runner {
     /**
      * Проверяет рекурсию при выполнении скриптов
      */
-    private boolean checkRecursion(String scriptFile, Scanner scriptScanner) {
-        int recursionCount = 0;
+    private boolean checkRecursion(String scriptFile) {
         for (String script : scriptStack) {
             if (scriptFile.equals(script)) {
-                recursionCount++;
-                if (recursionCount > 0) {
-                    console.println("Рекурсия выполняется больше 1 раза. Прерываем выполнение.");
-                    return false;
-                }
+                console.println("Рекурсия выполняется больше 1 раза. Прерываем выполнение.");
+                return false;
             }
         }
         return true;
@@ -96,10 +95,13 @@ public class Runner {
 
                 boolean shouldExecute = true;
                 if (userCommand[0].equals("execute_script")) {
-                    shouldExecute = checkRecursion(userCommand[1], scriptScanner);
+                    shouldExecute = checkRecursion(userCommand[1]);
                 }
-
-                commandResponse = shouldExecute ? launchCommand(userCommand) : new ExecutionResponse(false, "Превышена глубина рекурсии");
+                if (shouldExecute){
+                    commandResponse = launchCommand(userCommand);
+                } else {
+                    commandResponse = new ExecutionResponse(false,"Обнаружена рекурсия");
+                }
 
                 if (userCommand[0].equals("execute_script")) console.selectFileScanner(scriptScanner);
                 executionOutput.append(commandResponse.getMessage()).append("\n");

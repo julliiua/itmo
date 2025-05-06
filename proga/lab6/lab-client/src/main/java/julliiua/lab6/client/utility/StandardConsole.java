@@ -1,6 +1,10 @@
-package utility;
+package julliiua.lab6.client.utility;
+
+
+
 
 import java.util.NoSuchElementException;
+
 import java.util.Scanner;
 
 /**
