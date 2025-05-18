@@ -3,6 +3,9 @@ package julliiua.lab6.client.utility;
 
 
 
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.NoSuchElementException;
 
 import java.util.Scanner;
@@ -13,6 +16,7 @@ import java.util.Scanner;
 public class StandardConsole implements Console {
     private static Scanner fileScanner = null;
     private static final Scanner defaultScanner = new Scanner(System.in);
+
 
     /**
      * Выводит obj в консоль

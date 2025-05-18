@@ -1,10 +1,16 @@
 package julliiua.lab6.common.models;
 
 import julliiua.lab6.common.utility.Validatable;
+
+import java.io.Serial;
+import java.io.Serializable;
+
 /**
  * Класс, представляющий координаты музыкальной группы.
  */
-public class Coordinates implements Validatable {
+public class Coordinates implements Validatable, Serializable {
+    @Serial
+    private static final long serialVersionUID = 15L;
     private double x;
     private Integer y;
 

@@ -13,27 +13,20 @@ public class CollectionManager {
     private LocalDateTime lastInitTime;
     private LocalDateTime lastSaveTime;
     private DumpManager dumpManager;
+    String fileName = "C:\\itmo\\proga\\lab6\\collection.csv";
 
     public CollectionManager() {
-        this.lastInitTime = null;
-        this.dumpManager = DumpManager.getInstance();
-    }
+        this.fileName = fileName;
+        this.dumpManager = new DumpManager();
 
+    }
     public static CollectionManager getInstance() {
         if (instance == null) {
-            synchronized (CollectionManager.class) {
-                if (instance == null) {
-                    instance = new CollectionManager();
-                }
-            }
+            instance = new CollectionManager();
         }
         return instance;
     }
 
-    public LocalDateTime getLastInitTime() {
-
-        return lastInitTime;
-    }
 
     public int getFreeId() {
         return collection.stream().mapToInt(MusicBand::getId).max().orElse(0) + 1;
@@ -93,7 +86,6 @@ public class CollectionManager {
     public void saveCollection() {
         if (!collection.isEmpty()) {
             dumpManager.saveCollection(collection);
-            LocalDateTime lastSaveTime = LocalDateTime.now();
         }
     }
 
@@ -108,8 +100,5 @@ public class CollectionManager {
         return info.toString().trim();
     }
 
-    public void clear() {
-        collection.clear();
-    }
 }
     

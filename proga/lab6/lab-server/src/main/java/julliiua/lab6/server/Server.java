@@ -1,15 +1,13 @@
 package julliiua.lab6.server;
 
+
 import julliiua.lab6.common.utility.ExecutionResponse;
 import julliiua.lab6.common.utility.Pair;
 import julliiua.lab6.common.utility.Request;
 import julliiua.lab6.common.utility.Response;
 import julliiua.lab6.common.validators.ArgumentValidator;
-import julliiua.lab6.server.commands.Help;
-import julliiua.lab6.server.managers.CollectionManager;
-import julliiua.lab6.server.managers.CommandManager;
-import julliiua.lab6.server.managers.ConnectionManager;
-import julliiua.lab6.server.managers.Runner;
+import julliiua.lab6.server.commands.*;
+import julliiua.lab6.server.managers.*;
 import julliiua.lab6.server.utility.AskCommand;
 
 import java.io.EOFException;
@@ -22,7 +20,7 @@ import java.util.Map;
 import java.util.logging.*;
 
 public final class Server {
-
+    String fileName = System.getenv("FILENAME");
     public static final Logger logger = Logger.getLogger(Server.class.getName());
     static { initLogger();}
     private static void initLogger() {
@@ -64,9 +62,10 @@ public final class Server {
     private static final CollectionManager collectionManager = CollectionManager.getInstance();
     private static volatile boolean isRunning = true;
 
-
     public static void main(String[] args) {
         ExecutionResponse loadStatus = collectionManager.load();
+
+
         networkManager = new ConnectionManager(PORT);
 
         // Проверка успешности загрузки коллекции
@@ -79,6 +78,10 @@ public final class Server {
         // Регистрация команд
         commandManager = new CommandManager() {{
             register("help", new Help(this));
+            register("add", new Add(collectionManager));
+            register("show", new Show(collectionManager));
+            register("info", new Info(collectionManager));
+            register("save",new Save(collectionManager));
         }};
         Runner runner = new Runner(commandManager);
 
@@ -153,7 +156,7 @@ public final class Server {
                                 clientChannel.configureBlocking(false);
 
                                 try {
-                                    networkManager.send(response, clientChannel);
+                                    networkManager.send( response,clientChannel);
                                     logger.info("Response sent to client: " + clientChannel.getRemoteAddress());
                                     clientChannel.register(selector, SelectionKey.OP_READ);
                                 } catch (IOException e) {

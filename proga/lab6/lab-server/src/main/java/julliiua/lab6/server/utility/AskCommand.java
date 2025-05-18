@@ -72,8 +72,4 @@ public abstract class AskCommand<T extends ArgumentValidator> extends Command<T>
     public ExecutionResponse execute(String arg) {
         return new ExecutionResponse(false, "Метод должен вызываться с аргументом MusicBand!");
     }
-    @Override
-    public ExecutionResponse innerExecute(String arg) {
-        return null;
-    }
 }

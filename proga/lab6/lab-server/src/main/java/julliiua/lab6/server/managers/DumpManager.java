@@ -1,28 +1,46 @@
 package julliiua.lab6.server.managers;
 
-import julliiua.lab6.common.models.*;
+import com.opencsv.CSVWriter;
 import julliiua.lab6.common.models.*;
 import julliiua.lab6.common.utility.ExecutionResponse;
+import julliiua.lab6.server.Server;
 
 import java.io.*;
 import java.util.*;
 
 // отвечает за загрузку
 public class DumpManager {
-    private final String fileName;
-    private static DumpManager instance;
+    private final String filePath;
+    private static volatile DumpManager instance;
 
-    public DumpManager(String fileName) {
-        this.fileName = fileName;
+    /**
+     * Конструктор для создания объекта DumpManager.
+     */
+    public DumpManager() {
+        this.filePath = "C:\\itmo\\proga\\lab6\\collection.csv";
+        // Проверка наличия и корректности переменной окружения
+        if (filePath == null) {
+            Server.logger.severe("Environment variable FILENAME not found!");
+            System.exit(1);
+        } else if (filePath.isEmpty()) {
+            Server.logger.severe("Environment variable FILENAME does not contain a file path!");
+            System.exit(1);
+        } else if (!filePath.endsWith(".csv")) {
+            Server.logger.severe("The file must be in .csv format!");
+            System.exit(1);
+        } else if (!new File(filePath).exists()) {
+            Server.logger.severe("The file at the specified path was not found!");
+            System.exit(1);
+        }
     }
+
     public static DumpManager getInstance() {
         if (instance == null) {
-            //Server.logger.info("DumpManager instance created");
-            instance = new DumpManager("");
+            instance = new DumpManager();
+            return instance;
         }
-        return instance;
+        return null;
     }
-
     /**
      * Загружает коллекцию музыкальных групп из файла.
      * @param collection коллекция музыкальных групп
@@ -32,7 +50,7 @@ public class DumpManager {
             return new ExecutionResponse(false,"Ошибка: Коллекция пустая" );
         }
 
-        File file = new File(fileName);
+        File file = new File(filePath);
 
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
@@ -64,14 +82,18 @@ public class DumpManager {
     // чтение коллекции
 
     public ExecutionResponse saveCollection(PriorityQueue<MusicBand> collection) {
-        try (FileWriter writer = new FileWriter(fileName)) {
+        try {
+            CSVWriter writer = new CSVWriter(new FileWriter(filePath));
             for (MusicBand band : collection) {
-                writer.write(band.toCsv() + "\n");
+                writer.writeNext(new String[]{band.toCsv().toString()});
             }
+            writer.close();
+            return new ExecutionResponse(true, "Коллекция успешно сохранена в файл!");
         } catch (IOException e) {
-            return new ExecutionResponse(false,"Ошибка при сохранении файла.");
+            return new ExecutionResponse(false, "Произошла ошибка при записи коллекции в файл!");
         }
-        return new ExecutionResponse(true,"OK");
     }
     //сохранение коллекции
+
 }
+

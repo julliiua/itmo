@@ -4,6 +4,7 @@ package julliiua.lab6.common.models;
 import julliiua.lab6.common.utility.Element;
 import julliiua.lab6.common.utility.Validatable;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -12,6 +13,8 @@ import java.util.Objects;
  * Класс, представляющий музыкальную группу.
  */
 public class MusicBand extends Element implements Validatable, Serializable {
+    @Serial
+    private static final long serialVersionUID = 14L;
     private static int lastId = 0;
     private final int id;
     private String name;
@@ -95,7 +98,6 @@ public class MusicBand extends Element implements Validatable, Serializable {
         return true;
     }
 
-    @Override
     public String toString() {
         return "id=" + id +
                 ", name='" + name + '\'' +

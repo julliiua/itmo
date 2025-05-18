@@ -21,14 +21,11 @@ public class Help extends Command<NoArgValidator>  {
      */
     @Override
     public ExecutionResponse runInternal(String argument) {
+        String s ="";
         for (Command command : commandManager.getCommands().values()) {
-            new ExecutionResponse(true,"  " + command.getName() + " - " + command.getDescription());
-        }
-        return new ExecutionResponse(true,"Список команд выведен.");
+            s+="  " + command.getName() + " - " + command.getDescription()+"\n";
+            }
+        return new ExecutionResponse(true,s+"Список команд выведен.");
     }
 
-    @Override
-    public ExecutionResponse innerExecute(String arg) {
-        return null;
-    }
 }

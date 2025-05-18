@@ -23,7 +23,7 @@ public class Add extends AskCommand<NoArgValidator> {
     @Override
     public ExecutionResponse  runInternal(MusicBand band) {
         System.out.println(band);
-        CollectionManager.getInstance().add(band);
+        collectionManager.add(band);
         return new ExecutionResponse(true,"Элемент успешно добавлен в коллекцию!");
     }
 }

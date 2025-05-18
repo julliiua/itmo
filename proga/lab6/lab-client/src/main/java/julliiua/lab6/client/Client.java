@@ -19,7 +19,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public final class Client {
-    private static final StandardConsole console = new StandardConsole();
+    private static final StandardConsole console;
+
+    static {
+        console = new StandardConsole();
+    }
+
     private static final int SERVER_PORT = 15056;
     private static final String SERVER_HOST = "localhost";
     private static Map<String, Pair<ArgumentValidator, Boolean>> commandsData;
@@ -113,7 +118,7 @@ public final class Client {
 
     private static Request askingRequest(Console console, String inputCommand) throws Ask.AskBreak, Ask.Breaker {
         ElementValidate elementValidator = new ElementValidate();
-        Pair<ExecutionResponse, MusicBand> validationStatusPair = elementValidator.validateAsking(console, Math.abs(new Random().nextLong()) + 1); //На клиенте вводится id=1L, на сервере он меняется на корректный
+        Pair<ExecutionResponse, MusicBand> validationStatusPair = elementValidator.validateAsking(console, Math.abs(new Random().nextLong()) + 1);
         if (!validationStatusPair.getFirst().getExitCode()) {
             console.printError(validationStatusPair.getFirst().getMessage());
             return null;

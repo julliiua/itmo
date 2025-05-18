@@ -1,10 +1,16 @@
 package julliiua.lab6.common.models;
 
 import julliiua.lab6.common.utility.Validatable;
+
+import java.io.Serial;
+import java.io.Serializable;
+
 /**
  * Класс, представляющий музыкальный альбом.
  */
-public class Album implements Validatable {
+public class Album implements Validatable, Serializable {
+    @Serial
+    private static final long serialVersionUID = 16L;
     private String name;
     private Double sales;
 

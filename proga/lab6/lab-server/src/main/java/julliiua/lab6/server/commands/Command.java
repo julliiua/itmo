@@ -61,11 +61,10 @@ public abstract class Command<T extends ArgumentValidator> {
     public ExecutionResponse execute(String arg) {
         ExecutionResponse argumentStatus = argument.validate(arg, getName());
         if (argumentStatus.getExitCode()) {
-            return innerExecute(arg);
+            return runInternal(arg);
         } else {
             return argumentStatus;
         }
     }
-    public abstract ExecutionResponse innerExecute(String arg);
 }
 

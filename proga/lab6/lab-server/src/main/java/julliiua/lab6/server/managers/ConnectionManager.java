@@ -6,6 +6,8 @@ import julliiua.lab6.server.Server;
 
 import java.io.*;
 import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.net.SocketException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.ServerSocketChannel;
