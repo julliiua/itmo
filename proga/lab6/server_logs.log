@@ -3617,3 +3617,1745 @@ INFO: Stop packet sent
 
 мая 07, 2025 6:36:40 PM julliiua.lab6.server.Server run
 INFO: Response sent to client: /127.0.0.1:65342
+мая 18, 2025 3:19:00 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 18, 2025 3:19:01 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 18, 2025 3:19:01 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 18, 2025 3:19:08 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=16, readyOps=16
+мая 18, 2025 3:19:08 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:50671
+мая 18, 2025 3:19:08 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 18, 2025 3:19:08 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:19:08 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:19:08 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 18, 2025 3:19:08 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:19:08 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:50671
+мая 18, 2025 3:19:09 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50671], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=1, readyOps=1
+мая 18, 2025 3:19:09 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 3:19:09 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 3:19:09 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 3:19:09 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 3:19:09 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 3:19:09 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50671], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=4, readyOps=4
+мая 18, 2025 3:19:09 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 300
+мая 18, 2025 3:19:09 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:19:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 44
+мая 18, 2025 3:19:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:19:10 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:50671
+мая 18, 2025 3:19:12 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50671], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=1, readyOps=1
+мая 18, 2025 3:19:12 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 3:19:12 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 3:19:12 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 3:19:12 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 3:19:12 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 3:19:12 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50671], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=4, readyOps=4
+мая 18, 2025 3:19:12 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 300
+мая 18, 2025 3:19:12 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:19:13 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 44
+мая 18, 2025 3:19:13 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:19:13 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:50671
+мая 18, 2025 3:19:24 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50671], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=1, readyOps=1
+мая 18, 2025 3:19:24 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 3:19:24 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 3:19:24 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 3:19:24 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 3:19:24 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 3:19:24 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50671], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=4, readyOps=4
+мая 18, 2025 3:19:24 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 300
+мая 18, 2025 3:19:24 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:19:25 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 44
+мая 18, 2025 3:19:25 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:19:25 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:50671
+мая 18, 2025 3:19:35 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50671], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=1, readyOps=1
+мая 18, 2025 3:19:35 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 18, 2025 3:19:35 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 18, 2025 3:19:44 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=16, readyOps=16
+мая 18, 2025 3:19:44 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:50673
+мая 18, 2025 3:19:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 18, 2025 3:19:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:19:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:19:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 18, 2025 3:19:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:19:44 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:50673
+мая 18, 2025 3:19:46 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50673], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=1, readyOps=1
+мая 18, 2025 3:19:46 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 3:19:46 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 3:19:46 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 3:19:46 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 3:19:46 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 3:19:46 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50673], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=4, readyOps=4
+мая 18, 2025 3:19:46 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 300
+мая 18, 2025 3:19:46 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:19:47 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 44
+мая 18, 2025 3:19:47 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:19:47 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:50673
+мая 18, 2025 3:22:11 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50673], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=1, readyOps=1
+мая 18, 2025 3:22:11 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 18, 2025 3:22:11 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 18, 2025 3:22:47 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 18, 2025 3:22:48 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 18, 2025 3:22:48 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 18, 2025 3:22:50 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=16, readyOps=16
+мая 18, 2025 3:22:50 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:50715
+мая 18, 2025 3:22:50 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 18, 2025 3:22:50 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:22:50 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:22:51 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 18, 2025 3:22:51 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:22:51 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:50715
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50715], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=1, readyOps=1
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50715], selector=sun.nio.ch.WEPollSelectorImpl@1fbc7afb, interestOps=4, readyOps=4
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 300
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 44
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:22:59 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:50715
+мая 18, 2025 3:23:19 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 18, 2025 3:23:20 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 18, 2025 3:23:20 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@5e025e70, interestOps=16, readyOps=16
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:50716
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:50716
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50716], selector=sun.nio.ch.WEPollSelectorImpl@5e025e70, interestOps=1, readyOps=1
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50716], selector=sun.nio.ch.WEPollSelectorImpl@5e025e70, interestOps=4, readyOps=4
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 300
+мая 18, 2025 3:23:28 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:23:29 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 44
+мая 18, 2025 3:23:29 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:23:29 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:50716
+мая 18, 2025 3:23:29 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50716], selector=sun.nio.ch.WEPollSelectorImpl@5e025e70, interestOps=1, readyOps=1
+мая 18, 2025 3:23:29 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 18, 2025 3:23:29 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 18, 2025 3:23:31 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@5e025e70, interestOps=16, readyOps=16
+мая 18, 2025 3:23:31 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:50717
+мая 18, 2025 3:23:31 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 18, 2025 3:23:31 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:23:31 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:23:31 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 18, 2025 3:23:31 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:23:31 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:50717
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50717], selector=sun.nio.ch.WEPollSelectorImpl@5e025e70, interestOps=1, readyOps=1
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50717], selector=sun.nio.ch.WEPollSelectorImpl@5e025e70, interestOps=4, readyOps=4
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 300
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 44
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:23:33 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:50717
+мая 18, 2025 3:23:49 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 18, 2025 3:23:49 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 18, 2025 3:23:49 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 18, 2025 3:23:53 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@5e025e70, interestOps=16, readyOps=16
+мая 18, 2025 3:23:53 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:50718
+мая 18, 2025 3:23:53 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 18, 2025 3:23:53 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:23:53 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:50718
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50718], selector=sun.nio.ch.WEPollSelectorImpl@5e025e70, interestOps=1, readyOps=1
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50718], selector=sun.nio.ch.WEPollSelectorImpl@5e025e70, interestOps=4, readyOps=4
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 300
+мая 18, 2025 3:23:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:23:55 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 44
+мая 18, 2025 3:23:55 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:23:55 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:50718
+мая 18, 2025 3:27:44 PM julliiua.lab6.server.Server main
+SEVERE: Ошибка загрузки строки: "1,asd,12.0,12,2025-05-07T18:30:56.549256800,12,POP,12,12.0"
+мая 18, 2025 3:29:51 PM julliiua.lab6.server.Server main
+SEVERE: Ошибка загрузки строки: "1,asd,12.0,12,2025-05-07T18:30:56.549256800,12,POP,12,12.0"
+мая 18, 2025 3:30:38 PM julliiua.lab6.server.Server main
+SEVERE: Ошибка загрузки строки: "1,asd,12.0,12,2025-05-07T18:30:56.549256800,12,POP,12,12.0" java.lang.NumberFormatException: For input string: "12.0""
+мая 18, 2025 3:31:42 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 18, 2025 3:31:42 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 18, 2025 3:31:42 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 18, 2025 3:31:59 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 18, 2025 3:31:59 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:50747
+мая 18, 2025 3:31:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 18, 2025 3:31:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:31:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:31:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 18, 2025 3:31:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:31:59 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:50747
+мая 18, 2025 3:32:00 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50747], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 18, 2025 3:32:00 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 3:32:00 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 3:32:00 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 3:32:00 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 3:32:00 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 3:32:00 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50747], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 18, 2025 3:32:00 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 422
+мая 18, 2025 3:32:00 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:32:01 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 166
+мая 18, 2025 3:32:01 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:32:01 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:50747
+мая 18, 2025 3:35:06 PM julliiua.lab6.server.Server main
+SEVERE: Ошибка загрузки строки: "1,asd,12.0,12,2025-05-18T15:31:42.071179300,12,POP,12,12.0" java.lang.NumberFormatException: For input string: "12.0""
+мая 18, 2025 3:36:13 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 18, 2025 3:36:13 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 18, 2025 3:36:13 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 18, 2025 3:36:19 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 18, 2025 3:36:19 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:50755
+мая 18, 2025 3:36:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 18, 2025 3:36:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:36:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:36:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 18, 2025 3:36:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:36:19 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:50755
+мая 18, 2025 3:36:20 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50755], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 18, 2025 3:36:20 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 3:36:20 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 3:36:20 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 3:36:20 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 3:36:20 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 3:36:20 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:50755], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 18, 2025 3:36:20 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 422
+мая 18, 2025 3:36:20 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 3:36:21 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 166
+мая 18, 2025 3:36:21 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 3:36:21 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:50755
+мая 18, 2025 7:19:08 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 18, 2025 7:19:08 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 18, 2025 7:19:08 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 18, 2025 7:19:15 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 18, 2025 7:19:15 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:52895
+мая 18, 2025 7:19:15 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 18, 2025 7:19:15 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:19:15 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:19:15 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 18, 2025 7:19:15 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 7:19:15 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:52895
+мая 18, 2025 7:19:19 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 18, 2025 7:19:20 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 7:19:20 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 7:19:20 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 7:19:20 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 7:19:20 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 7:19:20 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 18, 2025 7:19:20 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 422
+мая 18, 2025 7:19:20 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:19:20 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 166
+мая 18, 2025 7:19:20 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 7:19:20 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:52895
+мая 18, 2025 7:19:38 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 18, 2025 7:19:38 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 919 bytes received from client
+мая 18, 2025 7:19:38 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 7:19:38 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='add', band=id=1, name='12', coordinates=12.0;21, numberOfParticipants=12, genre=POP, bestAlbum=asdfghjiuytrd; Продажи=121.0, creationDate=2025-05-18T19:19:38.706959700}
+мая 18, 2025 7:19:38 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'add'
+мая 18, 2025 7:19:38 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 7:19:38 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 18, 2025 7:19:38 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 339
+мая 18, 2025 7:19:38 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:19:39 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 83
+мая 18, 2025 7:19:39 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 7:19:39 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:52895
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 422
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 166
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 7:19:46 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:52895
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 908 bytes received from client
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='add', band=id=2, name='12', coordinates=12.0;12, numberOfParticipants=12, genre=POP, bestAlbum=12; Продажи=12.0, creationDate=2025-05-18T19:20:08.054178300}
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'add'
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 339
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 83
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 7:20:08 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:52895
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='save', band=null}
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'save'
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 335
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 79
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 7:20:11 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:52895
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 574
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 62
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 7:20:15 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:52895
+мая 18, 2025 7:20:24 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52895], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 18, 2025 7:20:24 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 18, 2025 7:20:24 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 18, 2025 7:20:29 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 18, 2025 7:20:29 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:52899
+мая 18, 2025 7:20:29 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 18, 2025 7:20:29 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:20:29 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:20:29 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 18, 2025 7:20:29 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 7:20:29 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:52899
+мая 18, 2025 7:20:33 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52899], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 18, 2025 7:20:33 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 18, 2025 7:20:33 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 18, 2025 7:20:33 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 18, 2025 7:20:33 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 18, 2025 7:20:33 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 18, 2025 7:20:33 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52899], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 18, 2025 7:20:33 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 574
+мая 18, 2025 7:20:33 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:20:33 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 18, 2025 7:20:34 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 62
+мая 18, 2025 7:20:34 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 18, 2025 7:20:34 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:52899
+мая 18, 2025 7:20:40 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:52899], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 18, 2025 7:20:40 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 18, 2025 7:20:40 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+РјР°СЏ 20, 2025 9:20:38 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+РјР°СЏ 20, 2025 9:20:38 PM julliiua.lab6.server.Server run
+INFO: Selector started
+РјР°СЏ 20, 2025 9:20:38 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+РјР°СЏ 20, 2025 9:20:59 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@ea4a92b, interestOps=16, readyOps=16
+РјР°СЏ 20, 2025 9:20:59 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:61350
+РјР°СЏ 20, 2025 9:20:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+РјР°СЏ 20, 2025 9:20:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+РјР°СЏ 20, 2025 9:20:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+РјР°СЏ 20, 2025 9:20:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+РјР°СЏ 20, 2025 9:20:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+РјР°СЏ 20, 2025 9:20:59 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:61350
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61350], selector=sun.nio.ch.WEPollSelectorImpl@ea4a92b, interestOps=1, readyOps=1
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Р’С‹РїРѕР»РЅРµРЅРёРµ РєРѕРјР°РЅРґС‹ 'show'
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61350], selector=sun.nio.ch.WEPollSelectorImpl@ea4a92b, interestOps=4, readyOps=4
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 574
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 62
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+РјР°СЏ 20, 2025 9:21:12 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:61350
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61350], selector=sun.nio.ch.WEPollSelectorImpl@ea4a92b, interestOps=1, readyOps=1
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 911 bytes received from client
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='add', band=id=1, name='asdfg', coordinates=12.0;12, numberOfParticipants=9, genre=POP, bestAlbum=13; РџСЂРѕРґР°Р¶Рё=13.0, creationDate=2025-05-20T21:21:49.182720300}
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Р’С‹РїРѕР»РЅРµРЅРёРµ РєРѕРјР°РЅРґС‹ 'add'
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61350], selector=sun.nio.ch.WEPollSelectorImpl@ea4a92b, interestOps=4, readyOps=4
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 339
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 83
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+РјР°СЏ 20, 2025 9:21:49 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:61350
+РјР°СЏ 20, 2025 9:21:52 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61350], selector=sun.nio.ch.WEPollSelectorImpl@ea4a92b, interestOps=1, readyOps=1
+РјР°СЏ 20, 2025 9:21:52 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+РјР°СЏ 20, 2025 9:21:52 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+РјР°СЏ 20, 2025 9:21:52 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+РјР°СЏ 20, 2025 9:21:52 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Р’С‹РїРѕР»РЅРµРЅРёРµ РєРѕРјР°РЅРґС‹ 'show'
+РјР°СЏ 20, 2025 9:21:52 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+РјР°СЏ 20, 2025 9:21:52 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61350], selector=sun.nio.ch.WEPollSelectorImpl@ea4a92b, interestOps=4, readyOps=4
+РјР°СЏ 20, 2025 9:21:52 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 574
+РјР°СЏ 20, 2025 9:21:52 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+РјР°СЏ 20, 2025 9:21:52 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+РјР°СЏ 20, 2025 9:21:53 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 62
+РјР°СЏ 20, 2025 9:21:53 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+РјР°СЏ 20, 2025 9:21:53 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:61350
+РјР°СЏ 20, 2025 9:22:06 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61350], selector=sun.nio.ch.WEPollSelectorImpl@ea4a92b, interestOps=1, readyOps=1
+РјР°СЏ 20, 2025 9:22:06 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+РјР°СЏ 20, 2025 9:22:06 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 20, 2025 9:23:14 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 9:23:15 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 9:23:15 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 9:23:19 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 20, 2025 9:23:19 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:61404
+мая 20, 2025 9:23:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 9:23:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 9:23:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 9:23:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 9:23:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 9:23:19 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:61404
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61404], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61404], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 574
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 62
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 9:23:23 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:61404
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61404], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 908 bytes received from client
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='add', band=id=1, name='12', coordinates=13.0;14, numberOfParticipants=112, genre=POP, bestAlbum=13; Продажи=13.0, creationDate=2025-05-20T21:23:54.396103}
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'add'
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61404], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 339
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 83
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 9:23:54 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:61404
+мая 20, 2025 9:23:57 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61404], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 9:23:57 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 9:23:57 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 9:23:57 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 9:23:57 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 9:23:57 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 9:23:57 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61404], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 9:23:57 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 574
+мая 20, 2025 9:23:57 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 9:23:57 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 9:23:58 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 62
+мая 20, 2025 9:23:58 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 9:23:58 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:61404
+мая 20, 2025 9:31:04 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:61404], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 9:31:04 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 20, 2025 9:31:04 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 20, 2025 10:04:29 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 10:04:29 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 10:04:29 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 10:04:39 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 20, 2025 10:04:39 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:62726
+мая 20, 2025 10:04:39 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 10:04:39 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:04:39 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:04:39 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 10:04:39 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:04:39 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:62726
+мая 20, 2025 10:04:43 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:62726], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:04:43 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 10:04:43 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 10:04:43 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 10:04:43 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 10:04:43 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 10:04:43 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:62726], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 10:04:43 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 574
+мая 20, 2025 10:04:43 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:04:43 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:04:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 62
+мая 20, 2025 10:04:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:04:44 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:62726
+мая 20, 2025 10:04:58 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:62726], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:04:58 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 911 bytes received from client
+мая 20, 2025 10:04:58 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 10:04:58 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='add', band=id=1, name='add', coordinates=12.0;12, numberOfParticipants=12, genre=POP, bestAlbum=1sdf; Продажи=12.0, creationDate=2025-05-20T22:04:58.904570100}
+мая 20, 2025 10:04:58 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'add'
+мая 20, 2025 10:04:58 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 10:04:58 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:62726], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 10:04:58 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 339
+мая 20, 2025 10:04:58 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:04:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 83
+мая 20, 2025 10:04:59 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:04:59 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:62726
+мая 20, 2025 10:05:01 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:62726], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:05:01 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 10:05:01 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 10:05:01 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 10:05:01 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 10:05:01 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 10:05:01 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:62726], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 10:05:01 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 574
+мая 20, 2025 10:05:01 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:05:01 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:05:02 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 62
+мая 20, 2025 10:05:02 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:05:02 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:62726
+мая 20, 2025 10:05:18 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:62726], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:05:18 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 20, 2025 10:05:18 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 20, 2025 10:24:55 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 10:24:55 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 10:24:55 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 10:25:00 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 20, 2025 10:25:00 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:63306
+мая 20, 2025 10:25:00 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 10:25:00 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:25:00 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:25:00 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 10:25:00 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:25:00 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:63306
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63306], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63306], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 574
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 62
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:25:06 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:63306
+мая 20, 2025 10:29:46 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63306], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:29:46 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 20, 2025 10:29:46 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 20, 2025 10:30:04 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 10:30:04 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 10:30:04 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 10:30:07 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 20, 2025 10:30:07 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:63435
+мая 20, 2025 10:30:07 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 10:30:07 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:30:07 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:30:07 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 10:30:07 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:30:07 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:63435
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63435], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63435], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 574
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 62
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:30:10 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:63435
+мая 20, 2025 10:31:18 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63435], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:31:18 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 20, 2025 10:31:18 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 20, 2025 10:31:33 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 10:31:33 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 10:31:33 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 10:31:37 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 20, 2025 10:31:37 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:63461
+мая 20, 2025 10:31:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 10:31:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:31:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:31:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 10:31:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:31:37 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:63461
+мая 20, 2025 10:31:43 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63461], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:31:43 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 10:31:43 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 10:31:43 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 10:31:43 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 10:31:43 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 10:31:43 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63461], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 10:31:43 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 574
+мая 20, 2025 10:31:43 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:31:43 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:31:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 62
+мая 20, 2025 10:31:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:31:44 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:63461
+мая 20, 2025 10:33:19 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63461], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:33:19 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 20, 2025 10:33:19 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 20, 2025 10:34:34 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 10:34:35 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 10:34:35 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 10:34:37 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 20, 2025 10:34:37 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:63513
+мая 20, 2025 10:34:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 10:34:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:34:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:34:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 10:34:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:34:37 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:63513
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63513], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63513], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 576
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 64
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:34:40 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:63513
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63513], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 911 bytes received from client
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='add', band=id=11, name='asd', coordinates=1.0;2, numberOfParticipants=12, genre=POP, bestAlbum=asdf; Продажи=12.0, creationDate=2025-05-20T22:35:00.394957400}
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'add'
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63513], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 339
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 83
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:35:00 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:63513
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63513], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63513], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 730
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 218
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:35:03 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:63513
+мая 20, 2025 10:51:46 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 10:51:46 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 10:51:46 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 10:51:54 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 20, 2025 10:51:54 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:63908
+мая 20, 2025 10:51:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 10:51:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:51:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:51:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 10:51:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:51:54 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:63908
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63908], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:63908], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 730
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 218
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 10:51:57 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:63908
+мая 20, 2025 11:00:46 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 11:00:46 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 11:00:46 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 11:00:49 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@2ff4f00f, interestOps=16, readyOps=16
+мая 20, 2025 11:00:49 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:64172
+мая 20, 2025 11:00:49 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 11:00:49 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:00:49 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:00:49 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 11:00:49 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:00:49 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:64172
+мая 20, 2025 11:00:53 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64172], selector=sun.nio.ch.WEPollSelectorImpl@2ff4f00f, interestOps=1, readyOps=1
+мая 20, 2025 11:00:53 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 11:00:53 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 11:00:53 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 11:00:53 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 11:00:53 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 11:00:53 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64172], selector=sun.nio.ch.WEPollSelectorImpl@2ff4f00f, interestOps=4, readyOps=4
+мая 20, 2025 11:00:53 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 727
+мая 20, 2025 11:00:53 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:00:53 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:00:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 215
+мая 20, 2025 11:00:54 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:00:54 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:64172
+мая 20, 2025 11:03:44 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64172], selector=sun.nio.ch.WEPollSelectorImpl@2ff4f00f, interestOps=1, readyOps=1
+мая 20, 2025 11:03:44 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 20, 2025 11:03:44 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 20, 2025 11:12:19 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 11:12:19 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 11:12:19 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 11:12:24 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 20, 2025 11:12:24 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:64617
+мая 20, 2025 11:12:24 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 11:12:24 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:12:24 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:12:24 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 11:12:24 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:12:24 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:64617
+мая 20, 2025 11:12:26 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64617], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:12:26 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 11:12:27 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 11:12:27 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 11:12:27 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 11:12:27 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 11:12:27 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64617], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 11:12:27 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 727
+мая 20, 2025 11:12:27 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:12:27 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:12:27 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 215
+мая 20, 2025 11:12:27 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:12:27 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:64617
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64617], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 911 bytes received from client
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='add', band=id=1, name='asdf', coordinates=12.0;12, numberOfParticipants=12, genre=POP, bestAlbum=asd; Продажи=12.0, creationDate=2025-05-20T23:12:39.527982900}
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'add'
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64617], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 339
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 83
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:12:39 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:64617
+мая 20, 2025 11:12:43 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64617], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:12:43 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 11:12:43 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 11:12:43 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 11:12:43 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 11:12:43 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 11:12:43 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64617], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 11:12:43 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 882
+мая 20, 2025 11:12:43 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:12:43 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:12:43 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:12:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 114
+мая 20, 2025 11:12:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:12:44 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:64617
+мая 20, 2025 11:17:53 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64617], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:17:53 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 20, 2025 11:17:53 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 20, 2025 11:18:33 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 11:18:34 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 11:18:34 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 11:18:37 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 20, 2025 11:18:37 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:64760
+мая 20, 2025 11:18:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 11:18:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:18:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:18:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 11:18:37 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:18:37 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:64760
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64760], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64760], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 882
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 114
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:18:44 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:64760
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64760], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 916 bytes received from client
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='add', band=id=1, name='asdfghjkl', coordinates=1234.0;1234, numberOfParticipants=1, genre=POP, bestAlbum=xcv; Продажи=34.0, creationDate=2025-05-20T23:19:07.210701}
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'add'
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64760], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 339
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 83
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:19:07 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:64760
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64760], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64760], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 1042
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 18
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:19:10 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:64760
+мая 20, 2025 11:26:36 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:64760], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:26:36 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 20, 2025 11:26:36 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully
+мая 20, 2025 11:27:08 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 11:27:08 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 11:27:08 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 11:27:13 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 20, 2025 11:27:13 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:65001
+мая 20, 2025 11:27:13 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 11:27:13 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:27:13 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:27:13 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 11:27:13 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:27:13 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:65001
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:65001], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:65001], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 1090
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 66
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:27:19 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:65001
+мая 20, 2025 11:30:26 PM julliiua.lab6.server.Server main
+INFO: The collection file has been successfully loaded!
+мая 20, 2025 11:30:26 PM julliiua.lab6.server.Server run
+INFO: Selector started
+мая 20, 2025 11:30:26 PM julliiua.lab6.server.Server run
+INFO: To stop the server, press [Ctrl + C]
+мая 20, 2025 11:30:29 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=sun.nio.ch.ServerSocketChannelImpl[/[0:0:0:0:0:0:0:0]:15056], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=16, readyOps=16
+мая 20, 2025 11:30:29 PM julliiua.lab6.server.Server run
+INFO: Client connected: /127.0.0.1:65092
+мая 20, 2025 11:30:29 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 533
+мая 20, 2025 11:30:29 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:30:29 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:30:30 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 21
+мая 20, 2025 11:30:30 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:30:30 PM julliiua.lab6.server.Server InitialCommandsData
+INFO: Command list sent to the client: /127.0.0.1:65092
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:65092], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 917 bytes received from client
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='add', band=id=409, name='jkhil', coordinates=12.0;12, numberOfParticipants=12, genre=POP, bestAlbum=hjyvyvi1; Продажи=12.0, creationDate=2025-05-20T23:30:44.111387700}
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'add'
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:65092], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 339
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 83
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:30:44 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:65092
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:65092], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: 144 bytes received from client
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.managers.ConnectionManager receive
+INFO: Request received from client
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.Server run
+INFO: Request received from client: Request{string='show', band=null}
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.managers.Runner launchCommand
+INFO: Выполнение команды 'show'
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.Server run
+INFO: Command executed successfully
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:65092], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=4, readyOps=4
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet with message length sent: 1217
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Packet of bytes sent with length: 256
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Last packet of bytes sent with length: 193
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.managers.ConnectionManager send
+INFO: Stop packet sent
+
+мая 20, 2025 11:30:48 PM julliiua.lab6.server.Server run
+INFO: Response sent to client: /127.0.0.1:65092
+мая 20, 2025 11:31:47 PM julliiua.lab6.server.Server run
+INFO: Processing key: channel=java.nio.channels.SocketChannel[connected local=/127.0.0.1:15056 remote=/127.0.0.1:65092], selector=sun.nio.ch.WEPollSelectorImpl@4563e9ab, interestOps=1, readyOps=1
+мая 20, 2025 11:31:47 PM julliiua.lab6.server.Server run
+SEVERE: Error receiving request from client: Connection reset
+мая 20, 2025 11:31:47 PM julliiua.lab6.server.Server run
+INFO: Collection saved successfully

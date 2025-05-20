@@ -55,5 +55,11 @@
 			<artifactId>lab-common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>julliiua.lab6</groupId>
+            <artifactId>lab-server</artifactId>
+            <version>1</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>

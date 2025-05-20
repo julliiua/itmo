@@ -51,18 +51,21 @@ public class DumpManager {
         }
 
         File file = new File(filePath);
-
+        if (!file.exists()) {
+            return new ExecutionResponse(false, "Ошибка: Файл не найден.");
+        }
+        int k=0;
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine().trim();
                 if (line.isEmpty()) continue;
 
 
-                String[] values = line.split(",");
+                String[] values = line.replace("\"", "").split(",");
                 if (values.length < 8) continue;
-
                 try {
                     MusicBand band = new MusicBand(
+                            Integer.parseInt(values[0]),
                             values[1],
                             new Coordinates(Double.parseDouble(values[2]), Integer.parseInt(values[3])),
                             Integer.parseInt(values[5]),
@@ -70,10 +73,12 @@ public class DumpManager {
                             new Album(values[7], Double.parseDouble(values[8]))
                     );
                     collection.add(band);
+                    k += 1;
                 } catch (Exception e) {
-                    return new ExecutionResponse(false,"Ошибка загрузки строки: " + line);
+                    return new ExecutionResponse(false,"Ошибка загрузки строки: " + line + " " + e);
                 }
             }
+            CollectionManager.setLastId(k);
             return  new ExecutionResponse(true,"OK");
         } catch (FileNotFoundException e) {
             return new ExecutionResponse(false,"Ошибка: Файл не найден.");

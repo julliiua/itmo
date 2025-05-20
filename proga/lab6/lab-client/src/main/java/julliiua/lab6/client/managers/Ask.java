@@ -25,7 +25,7 @@ public class Ask {
             super(message);
         }
     }
-    public static MusicBand askMusicBand(Console console, Long id) throws AskBreak {
+    public static MusicBand askMusicBand(Console console) throws AskBreak {
         try {
             String name;
             while (true) {
@@ -40,7 +40,7 @@ public class Ask {
             MusicGenre genre = askMusicGenre(console);
             Album album = askAlbum(console);
 
-            return new MusicBand(name, coordinates, numberOfParticipants, genre, album);
+            return new MusicBand(1, name, coordinates, numberOfParticipants, genre, album);
         } catch (NoSuchElementException | IllegalStateException e) {
             console.printError("чтения данных. Проверьте ввод и повторите попытку.");
             return null;

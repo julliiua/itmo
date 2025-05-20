@@ -81,7 +81,6 @@ public final class Server {
             register("add", new Add(collectionManager));
             register("show", new Show(collectionManager));
             register("info", new Info(collectionManager));
-            register("save",new Save(collectionManager));
         }};
         Runner runner = new Runner(commandManager);
 

@@ -6,10 +6,12 @@ import julliiua.lab6.common.utility.ExecutionResponse;
 
 import java.time.LocalDateTime;
 import java.util.PriorityQueue;
+import java.util.concurrent.ExecutionException;
 
 public class CollectionManager {
     private PriorityQueue<MusicBand> collection = new PriorityQueue<>();
     private static volatile CollectionManager instance;
+    private static int lastId = 0;
     private LocalDateTime lastInitTime;
     private LocalDateTime lastSaveTime;
     private DumpManager dumpManager;
@@ -28,18 +30,20 @@ public class CollectionManager {
     }
 
 
-    public int getFreeId() {
-        return collection.stream().mapToInt(MusicBand::getId).max().orElse(0) + 1;
+    public static int getFreeId() {
+        return ++lastId;
+    }
+    public static void setLastId(int k){
+        lastId=k;
     }
     // Возвращает первый свободный ID, который на 1 больше, чем максимальный ID в коллекции.
     //Если коллекция пустая, то возвращает 1.
 
     public boolean add(MusicBand band) {
-        if (containsId(band.getId())) return false;
         collection.add(band);
         return true;
     }
-    // Елси есть группа с таким id, то не добавляет
+
 
     public boolean update(MusicBand newBand) {
         if (!containsId(newBand.getId())) return false;
@@ -77,10 +81,11 @@ public class CollectionManager {
         return collection.size();
     }
 
+
     public ExecutionResponse load() {
-        dumpManager.loadCollection(collection);
+        ExecutionResponse resp = dumpManager.loadCollection(collection);
         lastInitTime = LocalDateTime.now();
-        return new ExecutionResponse(true, "OK");
+        return resp;
     }
 
     public void saveCollection() {

@@ -19,7 +19,7 @@ public class ElementValidate {
      */
     public Pair<ExecutionResponse, MusicBand> validateAsking(Console console, Long id) throws Ask.AskBreak, Breaker {
         try {
-            MusicBand band = Ask.askMusicBand(console, id);
+            MusicBand band = Ask.askMusicBand(console);
             return validating(band);
         } catch (Ask.IllegalInputException e) {
             return new Pair<>(new ExecutionResponse(false, e.getMessage()), null);
