@@ -81,6 +81,14 @@ public final class Server {
             register("add", new Add(collectionManager));
             register("show", new Show(collectionManager));
             register("info", new Info(collectionManager));
+            register("clear", new Clear(collectionManager));
+            register("sort", new Sort(collectionManager));
+            register("remove", new Remove((collectionManager)));
+            register("remove_first", new RemoveFirst((collectionManager)));
+            register("remove_head", new RemoveHead((collectionManager)));
+            register("add_if_min", new AddIfMin(collectionManager));
+            register("print_descending", new PrintDescending(collectionManager));
+            register("sum_of_number_of_participants", new SumOfNumberOfParticipants(collectionManager));
         }};
         Runner runner = new Runner(commandManager);
 

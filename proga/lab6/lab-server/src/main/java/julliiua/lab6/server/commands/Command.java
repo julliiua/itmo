@@ -1,5 +1,6 @@
 package julliiua.lab6.server.commands;
 
+import julliiua.lab6.common.models.MusicBand;
 import julliiua.lab6.common.utility.ExecutionResponse;
 import julliiua.lab6.common.utility.Pair;
 import julliiua.lab6.common.utility.ValidAnswer;
@@ -66,5 +67,6 @@ public abstract class Command<T extends ArgumentValidator> {
             return argumentStatus;
         }
     }
+
 }
 

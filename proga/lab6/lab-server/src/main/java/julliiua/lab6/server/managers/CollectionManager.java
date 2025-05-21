@@ -93,6 +93,9 @@ public class CollectionManager {
             dumpManager.saveCollection(collection);
         }
     }
+    public void clear() {
+        collection.clear();
+    }
 
     @Override
     public String toString() {
