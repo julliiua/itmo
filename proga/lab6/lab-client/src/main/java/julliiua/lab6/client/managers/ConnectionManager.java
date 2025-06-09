@@ -39,10 +39,10 @@ public class ConnectionManager {
         try(ByteArrayOutputStream bytes = new ByteArrayOutputStream();
             ObjectOutputStream out = new ObjectOutputStream(bytes)) {
 
-            out.writeObject(request);
-            ByteBuffer dataToSend = ByteBuffer.wrap(bytes.toByteArray());
-            channel.write(dataToSend);
-            out.flush();
+            out.writeObject(request); //сериализуем и записываем в поток out
+            ByteBuffer dataToSend = ByteBuffer.wrap(bytes.toByteArray()); // преобразуем байты в массив байтов
+            channel.write(dataToSend); //запись данных в канал
+            out.flush(); //принудительно сбрасывам буфер данные
         }
     }
     //получаем ответ

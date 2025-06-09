@@ -84,13 +84,6 @@ public final class Client {
         console.printError("Превышено максимальное количество попыток подключения");
     }
 
-    private static Request handleScript(String fileName) {
-        ExecutionResponse scriptStatus = runScript(fileName);
-        if (!scriptStatus.getExitCode()) {
-            console.printError(scriptStatus.getMessage());
-        }
-        return null;
-    }
 
     private static ExecutionResponse validateCommand(String[] userCommand) {
         try {

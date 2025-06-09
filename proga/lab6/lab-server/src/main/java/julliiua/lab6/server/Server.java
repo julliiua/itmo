@@ -30,9 +30,9 @@ public final class Server {
                 @Override
                 public String format(LogRecord record) {
                     String color = switch (record.getLevel().getName()) {
-                        case "SEVERE" -> "\u001B[31m"; // Красный
-                        case "WARNING" -> "\u001B[33m"; // Желтый
-                        case "INFO" -> "\u001B[32m"; // Зеленый
+                        case "SEVERE" -> "\u001B[31m"; // Красный -оштбки
+                        case "WARNING" -> "\u001B[33m"; // Желтый - предупреждения
+                        case "INFO" -> "\u001B[32m"; // Зеленый - информация
                         default -> "\u001B[0m"; // Сброс цвета
                     };
                     return color + "[" + record.getLevel() + "] " +
@@ -41,7 +41,7 @@ public final class Server {
                             formatMessage(record) + "\u001B[0m\n";
                 }
             });
-            // Настройка FileHandler
+            // Настройка FileHandler для записи в файл
             FileHandler fileHandler = new FileHandler("server_logs.log", true); // true для добавления логов в конец файла
             fileHandler.setFormatter(new SimpleFormatter()); // Устанавливаем простой форматтер
 
@@ -92,6 +92,7 @@ public final class Server {
         }};
         Runner runner = new Runner(commandManager);
 
+        //коректное завершения работы
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {
                 isRunning = false; // Останавливаем цикл
@@ -102,7 +103,7 @@ public final class Server {
                 logger.severe("An error occurred while shutting down the server: " + e.getMessage());
             }
         }));
-        run(runner);
+        run(runner); //пуск
     }
 
 
@@ -121,6 +122,7 @@ public final class Server {
 
                 while (keys.hasNext()) {
                     SelectionKey key = keys.next();
+                    //обработка ключей
                     logger.info("Processing key: " + key);
 
                     try {
@@ -134,6 +136,7 @@ public final class Server {
                                 clientChannel.configureBlocking(false);
                                 InitialCommandsData(clientChannel, key); // Отправка клиенту списка команд
                             }
+                            //чтение запроса
                             else if (key.isReadable()) {
                                 SocketChannel clientChannel = (SocketChannel) key.channel();
                                 clientChannel.configureBlocking(false);
@@ -158,6 +161,7 @@ public final class Server {
                                 }
                                 clientChannel.register(selector, SelectionKey.OP_WRITE);
 
+                            //отправка ответа клиенту
                             } else if (key.isWritable()) {
                                 SocketChannel clientChannel = (SocketChannel) key.channel();
                                 clientChannel.configureBlocking(false);
@@ -198,7 +202,7 @@ public final class Server {
         }
     }
 
-
+    //отправлем клиенту список доступных команд
     private static void InitialCommandsData(SocketChannel clientChannel, SelectionKey key) throws ClosedChannelException {
         try {
             Map<String, Pair<ArgumentValidator, Boolean>> commandsData = new HashMap<>();

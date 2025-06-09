@@ -17,7 +17,7 @@ public class DumpManager {
      * Конструктор для создания объекта DumpManager.
      */
     public DumpManager() {
-        this.filePath = "C:\\itmo\\proga\\lab6\\collection.csv";
+        this.filePath = "collection.csv";
         // Проверка наличия и корректности переменной окружения
         if (filePath == null) {
             Server.logger.severe("Environment variable FILENAME not found!");
@@ -34,13 +34,6 @@ public class DumpManager {
         }
     }
 
-    public static DumpManager getInstance() {
-        if (instance == null) {
-            instance = new DumpManager();
-            return instance;
-        }
-        return null;
-    }
     /**
      * Загружает коллекцию музыкальных групп из файла.
      * @param collection коллекция музыкальных групп
