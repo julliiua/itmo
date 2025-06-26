@@ -322,3 +322,938 @@ people.sort(Comparator.comparing(Person::getName));
 - `Collections.sort(List<T> list)`: сортирует список, используя естественный порядок (`Comparable`).
 - `Collections.sort(List<T> list, Comparator<? super T> c)`: сортирует с использованием заданного `Comparator`.
 - `list.sort(Comparator<? super T> c)`: метод самого списка, появился в Java 8.
+
+
+# 7. Интерфейсы Set и SortedSet, их реализации. Классы HashSet и TreeSet.
+
+**Интерфейс Set<E>**
+- Представляет коллекцию, которая не содержит дубликатов.
+- Если попытаться добавить элемент, который уже есть в Set (проверка через `equals()`), операция будет проигнорирована.
+- Не гарантирует порядок элементов (за исключением `LinkedHashSet`).
+
+**Основные реализации Set:**
+
+### 1. HashSet<E>
+- Самая распространенная реализация `Set`.
+- Основана на хэш-таблице (внутренне использует `HashMap`).
+- Не гарантирует порядок элементов. Порядок может меняться со временем.
+- Обеспечивает очень высокую производительность (в среднем O(1)) для операций `add`, `remove`, `contains`, `size`.
+- Требует, чтобы у добавляемых объектов были корректно реализованы методы `hashCode()` и `equals()`.
+- Допускает хранение одного `null` элемента.
+
+### 2. TreeSet<E>
+- Реализация, которая хранит элементы в отсортированном порядке.
+- Основана на сбалансированном бинарном дереве (красно-черное дерево).
+- Элементы сортируются либо в "естественном порядке" (класс должен реализовывать `Comparable`), либо с помощью `Comparator`, переданного в конструктор `TreeSet`.
+- Производительность операций `add`, `remove`, `contains` составляет O(log n).
+- Не допускает хранение `null` элементов (вызовет `NullPointerException`).
+
+**Интерфейс SortedSet<E>**
+- Расширяет `Set` и добавляет гарантию того, что итератор будет обходить элементы в отсортированном порядке.
+- `TreeSet` является основной реализацией этого интерфейса.
+- Предоставляет дополнительные методы для работы с отсортированной коллекцией:
+  - `Comparator<? super E> comparator()`: возвращает компаратор, используемый для сортировки.
+  - `SortedSet<E> subSet(E fromElement, E toElement)`: возвращает подмножество элементов.
+  - `SortedSet<E> headSet(E toElement)`: возвращает "голову" множества (элементы < `toElement`).
+  - `SortedSet<E> tailSet(E fromElement)`: возвращает "хвост" множества (элементы >= `fromElement`).
+  - `E first()`: возвращает первый (минимальный) элемент.
+  - `E last()`: возвращает последний (максимальный) элемент.
+
+**Сравнение HashSet и TreeSet:**
+
+| Характеристика       | HashSet                                      | TreeSet                                      |
+|-----------------------|----------------------------------------------|----------------------------------------------|
+| Порядок               | Неупорядоченный                              | Отсортированный                              |
+| Производительность    | O(1) в среднем                               | O(log n)                                     |
+| Требования к элементам| `equals()` и `hashCode()`                    | `Comparable` или `Comparator`               |
+| null элементы         | Разрешен один `null`                         | Не разрешены                                 |
+| Основа                | Хэш-таблица (`HashMap`)                      | Красно-черное дерево                         |
+
+---
+
+# 8. Интерфейс List и его реализации. Классы ArrayList и LinkedList.
+
+**Интерфейс List<E>**
+- Представляет собой упорядоченную коллекцию (последовательность).
+- Позволяет хранить дублирующиеся элементы.
+- Доступ к элементам осуществляется по целочисленному индексу (начиная с 0).
+- Позволяет контролировать позицию вставки каждого элемента.
+
+**Основные реализации List:**
+
+### 1. ArrayList<E>
+- Реализация `List` на основе динамического массива.
+- Хранит элементы в непрерывном блоке памяти.
+- **Преимущества:**
+  - Быстрый доступ по индексу (операция `get(int index)` выполняется за O(1)), так как позиция элемента вычисляется по формуле.
+- **Недостатки:**
+  - Медленные операции вставки и удаления элементов из середины списка (O(n)), так как требуется сдвигать все последующие элементы.
+  - При переполнении внутреннего массива происходит его копирование в новый массив большего размера, что является затратной операцией.
+- **Когда использовать:** Когда вам нужен частый доступ к элементам по индексу и редкие операции вставки/удаления.
+
+### 2. LinkedList<E>
+- Реализация `List` и `Deque` на основе двусвязного списка.
+- Каждый элемент (узел) хранит ссылку на предыдущий и следующий элементы.
+- **Преимущества:**
+  - Быстрые операции вставки и удаления элементов в начало, конец и середину списка (O(1), если у вас есть ссылка на узел; O(n) для поиска узла по индексу). Нужно лишь изменить ссылки у соседних элементов.
+- **Недостатки:**
+  - Медленный доступ по индексу (операция `get(int index)` выполняется за O(n)), так как требуется пройти по списку от начала или конца до нужного элемента.
+  - Занимает больше памяти, чем `ArrayList`, из-за хранения ссылок.
+- **Когда использовать:** Когда вам нужны частые операции вставки/удаления элементов. Также хорошо подходит для реализации очередей и стеков.
+
+**Сравнение ArrayList и LinkedList:**
+
+| Операция                | ArrayList                                   | LinkedList                                  |
+|-------------------------|---------------------------------------------|---------------------------------------------|
+| Доступ (`get`)          | O(1) - очень быстро                         | O(n) - медленно                             |
+| Вставка/удаление (конец)| O(1) в среднем (иногда O(n) из-за resizing) | O(1) - очень быстро                         |
+| Вставка/удаление (середина)| O(n) - медленно                          | O(1) (если итератор на месте)               |
+| Поиск (`contains`)      | O(n)                                       | O(n)                                       |
+| Использование памяти    | Меньше                                     | Больше (из-за ссылок)                       |
+
+---
+
+# 9. Интерфейсы Map и SortedMap, их реализации. Классы HashMap и TreeMap.
+
+**Интерфейс Map<K, V>**
+- Определяет структуру данных для хранения пар "ключ-значение".
+- Ключи (`K`) в `Map` должны быть уникальными.
+- Каждому ключу соответствует ровно одно значение (`V`).
+- Не является наследником интерфейса `Collection`.
+
+**Основные реализации Map:**
+
+### 1. HashMap<K, V>
+- Самая популярная реализация `Map`.
+- Основана на хэш-таблице.
+- Не гарантирует порядок элементов.
+- Обеспечивает очень высокую производительность (в среднем O(1)) для операций `put`, `get`, `remove`, `containsKey`.
+- Требует, чтобы у ключей были корректно реализованы методы `hashCode()` и `equals()`.
+- Допускает один `null` ключ и множество `null` значений.
+
+### 2. TreeMap<K, V>
+- Реализация, которая хранит записи отсортированными по ключам.
+- Основана на сбалансированном бинарном дереве (красно-черное дерево).
+- Ключи сортируются либо в "естественном порядке" (класс ключа должен реализовывать `Comparable`), либо с помощью `Comparator`, переданного в конструктор `TreeMap`.
+- Производительность операций `put`, `get`, `remove` составляет O(log n).
+- Не допускает `null` ключей (вызовет `NullPointerException`).
+
+**Интерфейс SortedMap<K, V>**
+- Расширяет `Map` и гарантирует, что итерация по ключам будет происходить в отсортированном порядке.
+- `TreeMap` является основной реализацией этого интерфейса.
+- Предоставляет дополнительные методы, аналогичные `SortedSet`:
+  - `Comparator<? super K> comparator()`
+  - `SortedMap<K,V> subMap(K fromKey, K toKey)`
+  - `SortedMap<K,V> headMap(K toKey)`
+  - `SortedMap<K,V> tailMap(K fromKey)`
+  - `K firstKey()`
+  - `K lastKey()`
+
+**Сравнение HashMap и TreeMap:**
+
+| Характеристика       | HashMap                                      | TreeMap                                      |
+|-----------------------|----------------------------------------------|----------------------------------------------|
+| Порядок               | Неупорядоченный                              | Отсортированный по ключам                   |
+| Производительность    | O(1) в среднем                               | O(log n)                                     |
+| Требования к ключам   | `equals()` и `hashCode()`                    | `Comparable` или `Comparator`               |
+| null ключ             | Разрешен один                                | Не разрешен                                  |
+| Основа                | Хэш-таблица                                  | Красно-черное дерево                         |
+
+---
+
+# 10. Интерфейсы Queue и Deque. Классы PriorityQueue и ArrayDeque.
+
+**Интерфейс Queue<E> (Очередь)**
+- Коллекция, работающая по принципу FIFO (First-In-First-Out, "первым пришел — первым ушел").
+- Элементы добавляются в "хвост" очереди, а извлекаются из "головы".
+- Методы `Queue` существуют в двух вариантах:
+  - Один бросает исключение при ошибке (`add`, `remove`, `element`).
+  - Другой возвращает специальное значение (`offer` -> `false`, `poll` -> `null`, `peek` -> `null`).
+
+**Интерфейс Deque<E> (Двунаправленная очередь)**
+- Расширяет `Queue` и позволяет добавлять/удалять элементы с обоих концов.
+- Может использоваться как очередь (FIFO) и как стек (LIFO - Last-In-First-Out).
+- Как стек: `push` (`addFirst`), `pop` (`removeFirst`), `peek` (`peekFirst`).
+
+**Реализации:**
+
+### 1. PriorityQueue<E>
+- Особый вид очереди, где элементы упорядочены не по времени добавления, а по приоритету.
+- При извлечении (`poll`) всегда возвращается элемент с наивысшим приоритетом (по умолчанию — наименьший элемент).
+- Порядок определяется либо "естественным порядком" (`Comparable`), либо с помощью `Comparator`.
+- Основана на структуре данных "куча" (heap).
+- Не допускает `null` элементов.
+- Производительность `offer` и `poll` — O(log n). `peek` — O(1).
+- Применение: алгоритмы поиска кратчайшего пути (Дейкстры), планировщики задач.
+
+### 2. ArrayDeque<E>
+- Реализация `Deque` на основе циклического массива.
+- Очень эффективна для добавления и удаления элементов с обоих концов (O(1) в среднем).
+- Не имеет ограничений по емкости (растет по мере необходимости).
+- Не допускает `null` элементов.
+- Является предпочтительной реализацией для стеков и очередей, когда не требуется сортировка по приоритету. Она быстрее, чем `LinkedList`.
+
+**Пример использования ArrayDeque как стека:**
+```java
+Deque<String> stack = new ArrayDeque<>();
+stack.push("A"); // Добавляем в начало
+stack.push("B");
+stack.push("C");
+System.out.println(stack.pop()); // C (извлекаем из начала)
+System.out.println(stack.peek()); // B (смотрим на начало)
+```
+
+**Пример использования ArrayDeque как очереди:**
+```java
+Queue<String> queue = new ArrayDeque<>();
+queue.offer("A"); // Добавляем в конец
+queue.offer("B");
+queue.offer("C");
+System.out.println(queue.poll()); // A (извлекаем из начала)
+System.out.println(queue.peek()); // B (смотрим на начало)
+```
+
+---
+
+# 11. Интерфейсы SequencedCollection, SequencedSet. Классы HashSet и LinkedHashSet.
+
+Эти интерфейсы были добавлены в Java 21 для формализации коллекций с определенным порядком следования элементов.
+
+**Интерфейс SequencedCollection<E>**
+- Представляет коллекцию, элементы которой имеют определенный, предсказуемый порядок следования (encounter order).
+- Объединяет общие возможности `List` и `Deque`.
+- Предоставляет методы для доступа, добавления и удаления элементов с обоих концов:
+  - `addFirst(E)`, `addLast(E)`
+  - `getFirst()`, `getLast()`
+  - `removeFirst()`, `removeLast()`
+- `List`, `Deque` и `LinkedHashSet` реализуют этот интерфейс.
+
+**Интерфейс SequencedSet<E>**
+- Расширяет `SequencedCollection` и `Set`.
+- Представляет собой `Set`, элементы которого имеют определенный порядок.
+- Основной реализацией является `LinkedHashSet`. `SortedSet` (и `TreeSet`) также его реализует.
+
+**Сравнение HashSet и LinkedHashSet**
+
+### HashSet<E>
+- Основан на хэш-таблице.
+- Не гарантирует порядок элементов. Порядок итерации может меняться после добавления или удаления элементов.
+- Производительность: O(1) для `add`, `remove`, `contains`.
+
+### LinkedHashSet<E>
+- Наследуется от `HashSet`.
+- Основан на хэш-таблице, но дополнительно поддерживает двусвязный список, который проходит через все его элементы.
+- Этот список поддерживает порядок вставки элементов. Итерация по `LinkedHashSet` происходит в том порядке, в котором элементы были добавлены.
+- Производительность практически такая же, как у `HashSet` (O(1)), но с небольшими накладными расходами на поддержку списка.
+- **Когда использовать:** Когда нужна производительность `HashSet`, но при этом важен порядок итерации.
+
+**Пример:**
+```java
+Set<String> hashSet = new HashSet<>();
+hashSet.add("Charlie");
+hashSet.add("Alice");
+hashSet.add("Bob");
+System.out.println("HashSet: " + hashSet); // Вывод может быть любым, например [Alice, Bob, Charlie]
+
+Set<String> linkedHashSet = new LinkedHashSet<>();
+linkedHashSet.add("Charlie");
+linkedHashSet.add("Alice");
+linkedHashSet.add("Bob");
+System.out.println("LinkedHashSet: " + linkedHashSet); // Вывод всегда [Charlie, Alice, Bob]
+```
+
+---
+
+# 12. Классы Collections, Arrays и Objects, методы для работы с коллекциями и массивами.
+
+Это три утилитарных класса, предоставляющих статические методы для выполнения общих операций.
+
+### 1. java.util.Collections
+- Содержит статические методы для работы с коллекциями (`List`, `Set`, `Map`).
+- **Основные методы:**
+  - **Сортировка:** `sort(List<T> list)`, `sort(List<T> list, Comparator<? super T> c)`
+  - **Поиск:** `binarySearch(List<? extends Comparable> list, T key)`
+  - **Перемешивание:** `shuffle(List<?> list)`
+  - **Изменение порядка:** `reverse(List<?> list)`, `rotate(List<?> list, int distance)`
+  - **Копирование и заполнение:** `copy(List dest, List src)`, `fill(List list, T obj)`
+  - **Поиск экстремумов:** `min(Collection coll)`, `max(Collection coll)`
+  - **Создание неизменяемых (immutable) коллекций:** `unmodifiableList(List l)`, `unmodifiableSet(Set s)`, `unmodifiableMap(Map m)`
+  - **Создание потокобезопасных (thread-safe) оберток:** `synchronizedList(List l)`, `synchronizedSet(Set s)`, `synchronizedMap(Map m)`
+  - **Создание пустых коллекций:** `emptyList()`, `emptySet()`, `emptyMap()`
+
+### 2. java.util.Arrays
+- Содержит статические методы для работы с массивами.
+- **Основные методы:**
+  - **Сортировка:** `sort(int[] a)`, `sort(T[] a, Comparator<? super T> c)`
+  - **Поиск:** `binarySearch(int[] a, int key)`
+  - **Сравнение:** `equals(int[] a, int[] a2)`, `compare(int[] a, int[] a2)`
+  - **Заполнение:** `fill(int[] a, int val)`
+  - **Копирование:** `copyOf(T[] original, int newLength)`, `copyOfRange(...)`
+  - **Преобразование в строку:** `toString(int[] a)`
+  - **Преобразование в Stream:** `stream(T[] array)`
+  - **Создание списка из массива:** `asList(T... a)` (возвращает список фиксированного размера, обернутый вокруг массива).
+
+### 3. java.util.Objects
+- Содержит статические утилитарные методы для работы с объектами, особенно полезны для обработки `null`. Появился в Java 7.
+- **Основные методы:**
+  - **Сравнение:** `equals(Object a, Object b)` - безопасно сравнивает два объекта, даже если один из них `null`.
+  - **Хэш-код:** `hash(Object... values)` - вычисляет хэш-код на основе переданных значений, удобен для реализации `hashCode()`. `hashCode(Object o)` - возвращает хэш-код или 0, если объект `null`.
+  - **Проверка на null:** `requireNonNull(T obj)` - проверяет, что объект не `null`, и если это так, бросает `NullPointerException`. `requireNonNull(T obj, String message)` - то же самое с пользовательским сообщением.
+  - **Значение по умолчанию:** `requireNonNullElse(T obj, T defaultObj)` - возвращает `obj`, если он не `null`, иначе `defaultObj`.
+  - **Преобразование в строку:** `toString(Object o)`, `toString(Object o, String nullDefault)` - возвращает строковое представление или значение по умолчанию, если объект `null`.
+  
+
+# 13. Байтовые и символьные потоки ввода-вывода. Базовые классы и их потомки.
+
+Система ввода-вывода (I/O) в Java основана на потоках. Поток — это абстракция, представляющая собой последовательность данных.
+
+**Два основных типа потоков:**
+
+## 1. Байтовые потоки (Byte Streams)
+- Работают с необработанными двоичными данными (байтами)
+- Подходят для чтения и записи любых типов файлов: изображений, аудио, видео, исполняемых файлов
+- **Базовые абстрактные классы:**
+  - `java.io.InputStream`: для чтения байтов
+    - Основные потомки: `FileInputStream`, `ByteArrayInputStream`, `ObjectInputStream`
+  - `java.io.OutputStream`: для записи байтов
+    - Основные потомки: `FileOutputStream`, `ByteArrayOutputStream`, `ObjectOutputStream`
+
+## 2. Символьные потоки (Character Streams)
+- Работают с символами (Unicode, 16-бит)
+- Автоматически обрабатывают преобразование между байтами и символами с использованием указанной кодировки
+- Подходят для работы с текстовыми данными
+- **Базовые абстрактные классы:**
+  - `java.io.Reader`: для чтения символов
+    - Основные потомки: `FileReader`, `StringReader`, `InputStreamReader`
+  - `java.io.Writer`: для записи символов
+    - Основные потомки: `FileWriter`, `StringWriter`, `OutputStreamWriter`
+
+**Иерархия и взаимодействие:**
+- Символьные потоки являются "обертками" над байтовыми потоками
+- `InputStreamReader` — это мост от байтовых потоков к символьным: он читает байты и декодирует их в символы с использованием указанной кодировки
+- `OutputStreamWriter` — мост в обратную сторону: он принимает символы, кодирует их в байты и записывает в базовый `OutputStream`
+
+**Пример:**
+```java
+// Байтовый поток
+try (FileInputStream fis = new FileInputStream("data.bin");
+     FileOutputStream fos = new FileOutputStream("copy.bin")) {
+    int byteData;
+    while ((byteData = fis.read()) != -1) {
+        fos.write(byteData);
+    }
+}
+
+// Символьный поток
+try (FileReader reader = new FileReader("text.txt", StandardCharsets.UTF_8);
+     FileWriter writer = new FileWriter("copy.txt", StandardCharsets.UTF_8)) {
+    int charData;
+    while ((charData = reader.read()) != -1) {
+        writer.write(charData);
+    }
+}
+```
+
+# 14. Потоки-фильтры, BufferedReader, InputStreamReader, PrintStream.
+
+**Потоки-фильтры (Filter Streams)**
+- Это потоки, которые "оборачивают" другие потоки (байтовые или символьные) для добавления новой функциональности. Они работают по принципу "декоратора"
+- Примеры байтовых фильтров: `BufferedInputStream`, `DataInputStream`, `ObjectInputStream`
+- Примеры символьных фильтров: `BufferedReader`, `PrintWriter`
+
+**InputStreamReader**
+- Как упоминалось выше, это мост от байтовых потоков к символьным
+- Он читает байты из `InputStream` и преобразует их в символы, используя заданную кодировку
+- Это ключевой класс для правильной работы с текстовыми файлами, особенно если их кодировка отличается от системной по умолчанию
+
+```java
+// Чтение текстового файла в кодировке UTF-8
+FileInputStream fis = new FileInputStream("file.txt");
+InputStreamReader reader = new InputStreamReader(fis, "UTF-8");
+```
+
+**BufferedReader**
+- Символьный поток-фильтр, который добавляет буферизацию к другому `Reader`
+- Буферизация — это чтение данных из источника большими кусками (в буфер) за один раз
+- Предоставляет очень удобный метод `readLine()`, который читает целую строку текста за раз
+
+```java
+try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
+    String line;
+    while ((line = br.readLine()) != null) {
+        System.out.println(line);
+    }
+}
+```
+
+**PrintStream**
+- Байтовый поток-фильтр, который добавляет функциональность для вывода форматированного представления различных типов данных (int, double, String и т.д.)
+- Он преобразует эти данные в байты и записывает в базовый `OutputStream`
+- В отличие от других потоков, `PrintStream` никогда не бросает `IOException`
+- Может автоматически сбрасывать буфер (auto-flush) после каждой новой строки
+- `System.out`, `System.err` являются объектами типа `PrintStream`
+
+# 15. Стандартный ввод и вывод. Поля System.in, .out, .err, класс Scanner.
+
+**Стандартные потоки** — это три предопределенных потока, доступных в любой Java-программе. Они управляются операционной системой.
+
+- **System.out** — стандартный поток вывода
+  - Тип: `PrintStream`
+  - По умолчанию направлен на консоль
+  - Используется для вывода обычной информации (`System.out.println("Hello");`)
+
+- **System.err** — стандартный поток ошибок
+  - Тип: `PrintStream`
+  - По умолчанию также направлен на консоль
+  - Используется для вывода сообщений об ошибках
+
+- **System.in** — стандартный поток ввода
+  - Тип: `InputStream`
+  - По умолчанию связан с клавиатурой
+  - Представляет собой "сырой" байтовый поток
+
+**Класс java.util.Scanner**
+- Утилитарный класс, который упрощает разбор (парсинг) примитивных типов и строк из потока ввода
+- Может "сканировать" данные из любого источника, который реализует `Readable`
+- Разбивает входные данные на "токены" с использованием разделителя (по умолчанию — пробельные символы)
+- Предоставляет удобные методы `nextInt()`, `nextDouble()`, `nextLine()`, `next()` и т.д.
+
+**Пример использования Scanner:**
+```java
+Scanner scanner = new Scanner(System.in);
+
+System.out.print("Введите ваше имя: ");
+String name = scanner.nextLine();
+
+System.out.print("Введите ваш возраст: ");
+int age = scanner.nextInt();
+
+System.out.println("Привет, " + name + "! Вам " + age + " лет.");
+scanner.close();
+```
+
+# 16. Сериализация объектов. Интерфейс Serializable. Модификатор transient.
+
+**Сериализация** — это процесс преобразования состояния объекта в последовательность байтов.  
+**Десериализация** — это обратный процесс восстановления объекта из этой последовательности.
+
+**Интерфейс java.io.Serializable**
+- Интерфейс-маркер (не содержит методов)
+- Класс должен реализовывать этот интерфейм, чтобы его объекты можно было сериализовать
+- Все нестатические и нетранзиентные поля автоматически сериализуются
+
+**Модификатор transient**
+- Поля, помеченные как `transient`, не сериализуются
+- Полезно для конфиденциальных данных или временных полей
+
+**Пример:**
+```java
+class User implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private String login;
+    private transient String password;
+
+    // конструктор, методы...
+}
+
+// Сериализация
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("user.dat"));
+oos.writeObject(user);
+
+// Десериализация
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("user.dat"));
+User restoredUser = (User) ois.readObject();
+```
+
+# 17. Работа с файлами в Java. Интерфейс Path. Классы File, Files, Paths.
+
+**NIO.2 (New I/O)** — современный API для работы с файлами (Java 7+)
+
+**Основные классы:**
+- `Path` — интерфейс, представляющий путь к файлу
+- `Paths` — фабрика для создания объектов `Path`
+- `Files` — утилитарный класс с методами для работы с файлами
+
+**Пример:**
+```java
+Path path = Paths.get("data.txt");
+
+// Запись в файл
+Files.write(path, List.of("Строка 1", "Строка 2"));
+
+// Чтение из файла
+List<String> lines = Files.readAllLines(path);
+
+// Копирование
+Files.copy(path, Paths.get("copy.txt"));
+```
+
+# 18. Новый пакет ввода-вывода. Буферы и каналы. Класс FileChannel.
+
+**NIO (New I/O)** — альтернативная система ввода-вывода (Java 1.4+)
+
+**Ключевые концепции:**
+- **Буферы (Buffers)** — контейнеры для данных
+- **Каналы (Channels)** — пути для передачи данных
+- **FileChannel** — канал для работы с файлами
+
+**Пример работы с FileChannel:**
+```java
+try (FileChannel channel = FileChannel.open(Paths.get("file.txt"))) {
+    ByteBuffer buffer = ByteBuffer.allocate(48);
+    
+    // Чтение из канала в буфер
+    while (channel.read(buffer) != -1) {
+        buffer.flip();
+        // Обработка данных в буфере
+        buffer.clear();
+    }
+}
+```
+
+**Преимущества NIO:**
+- Неблокирующий ввод-вывод
+- Прямые буферы (вне кучи)
+- Memory-mapped files
+
+
+# 19. Взаимодействие с базами данных. Протокол JDBC. Основные элементы.
+
+**JDBC (Java Database Connectivity)** — это стандартный Java API для взаимодействия с реляционными базами данных. Важно понимать, что JDBC — это не протокол, а спецификация (API), которая определяет набор классов и интерфейсов. Производители баз данных (PostgreSQL, Oracle, MySQL и др.) предоставляют конкретные реализации этого API в виде JDBC-драйверов.
+
+Цель JDBC — предоставить универсальный, платформо- и СУБД-независимый способ для Java-приложений выполнять SQL-запросы к базе данных.
+
+## Основные элементы (компоненты) JDBC:
+
+1. **Driver**: Интерфейс, который должен быть реализован производителем СУБД. Драйвер — это "переводчик" между вызовами JDBC API и специфическим протоколом конкретной базы данных.
+2. **DriverManager**: Класс, который управляет набором доступных JDBC-драйверов. Его основная задача — установить соединение с базой данных на основе URL-адреса подключения.
+3. **Connection**: Интерфейс, представляющий сессию (соединение) с базой данных. Все SQL-запросы выполняются в контексте Connection.
+4. **Statement**: Интерфейс, используемый для выполнения статичных SQL-запросов.
+5. **PreparedStatement**: Расширение Statement, используемое для выполнения параметризованных (заранее скомпилированных) запросов.
+6. **ResultSet**: Интерфейс, представляющий результат выполнения SQL-запроса (SELECT).
+
+**Схема взаимодействия**:  
+Приложение → DriverManager → JDBC Driver → База данных
+
+---
+
+# 20. Создание соединения с базой данных. Класс DriverManager. Интерфейс Connection.
+
+## Класс DriverManager
+Это "точка входа" в JDBC. Он отвечает за управление списком зарегистрированных драйверов и установку соединения с базой данных. Основной метод — `getConnection()`.
+
+**Создание соединения**:
+```java
+// Формат JDBC URL: jdbc:<subprotocol>:<subname>
+String url = "jdbc:postgresql://localhost:5432/mydatabase";
+String user = "user";
+String password = "password";
+
+try (Connection connection = DriverManager.getConnection(url, user, password)) {
+    System.out.println("Соединение установлено!");
+} catch (SQLException e) {
+    System.err.println("Ошибка подключения: " + e.getMessage());
+}
+```
+
+## Интерфейс Connection
+Представляет активное соединение с базой данных. Ключевые методы:
+- `createStatement()`: Создает объект Statement
+- `prepareStatement(String sql)`: Создает PreparedStatement
+- `prepareCall(String sql)`: Создает CallableStatement
+- `close()`: Закрывает соединение
+- `setAutoCommit(boolean autoCommit)`: Управление транзакциями
+- `commit()`: Фиксирует изменения
+- `rollback()`: Откатывает изменения
+
+---
+
+# 21. Создание запросов. Интерфейсы Statement, PreparedStatement, CallableStatement.
+
+## 1. Statement
+Используется для простых SQL-запросов без параметров.
+```java
+try (Statement stmt = connection.createStatement()) {
+    ResultSet rs = stmt.executeQuery("SELECT * FROM users");
+}
+```
+
+## 2. PreparedStatement (рекомендуется)
+Для параметризованных запросов. Защищает от SQL-инъекций.
+```java
+String sql = "SELECT * FROM users WHERE name = ? AND age > ?";
+try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+    pstmt.setString(1, "John");
+    pstmt.setInt(2, 30);
+    ResultSet rs = pstmt.executeQuery();
+}
+```
+
+## 3. CallableStatement
+Для вызова хранимых процедур.
+```java
+String sql = "{call get_user_by_id(?, ?)}";
+try (CallableStatement cstmt = connection.prepareCall(sql)) {
+    cstmt.setInt(1, 123);
+    cstmt.registerOutParameter(2, Types.VARCHAR);
+    cstmt.execute();
+    String userName = cstmt.getString(2);
+}
+```
+
+---
+
+# 22. Выполнение запросов. Методы execute, executeQuery, executeUpdate.
+
+| Метод               | Назначение                          | Возвращаемое значение |
+|---------------------|-------------------------------------|-----------------------|
+| `executeQuery()`    | Для SELECT запросов                 | ResultSet             |
+| `executeUpdate()`   | Для INSERT, UPDATE, DELETE          | Количество измененных строк |
+| `execute()`         | Универсальный метод для любых запросов | boolean (true если ResultSet) |
+
+Пример:
+```java
+// executeQuery
+ResultSet rs = stmt.executeQuery("SELECT * FROM products");
+
+// executeUpdate
+int rows = stmt.executeUpdate("UPDATE products SET price = 99.99 WHERE id = 5");
+
+// execute
+boolean isResult = stmt.execute("SOME SQL");
+if (isResult) {
+    ResultSet rs = stmt.getResultSet();
+} else {
+    int count = stmt.getUpdateCount();
+}
+```
+
+---
+
+# 23. Обработка результатов запроса. Интерфейс ResultSet, получение значений.
+
+**Интерфейс ResultSet**:
+- Представляет результаты SELECT-запроса
+- Курсор изначально перед первой строкой
+- Метод `next()` перемещает курсор и возвращает true, если есть данные
+
+Пример обработки:
+```java
+try (ResultSet rs = stmt.executeQuery("SELECT id, name, price FROM products")) {
+    while (rs.next()) {
+        int id = rs.getInt("id");
+        String name = rs.getString("name");
+        double price = rs.getDouble("price");
+        System.out.printf("ID: %d, Name: %s, Price: %.2f%n", id, name, price);
+    }
+}
+```
+
+Методы получения данных:
+- `getInt()`, `getString()`, `getDouble()` и др.
+- Доступ по имени колонки или индексу (начиная с 1)
+
+---
+
+
+# 24. Многопоточность. Класс Thread и интерфейс Runnable. Состояния потока.
+
+**Способы создания потока**:
+
+1. Наследование от Thread:
+```java
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Поток запущен");
+    }
+}
+new MyThread().start();
+```
+
+2. Реализация Runnable (рекомендуется):
+```java
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Поток через Runnable");
+    }
+}
+new Thread(new MyRunnable()).start();
+```
+
+**Состояния потока**:
+1. NEW - создан, но не запущен
+2. RUNNABLE - выполняется или готов к выполнению
+3. BLOCKED - заблокирован
+4. WAITING - ожидает без таймаута
+5. TIMED_WAITING - ожидает с таймаутом
+6. TERMINATED - завершен
+
+
+# 25. Гонки. Синхронизация потоков. Мониторы. Модификатор synchronized.
+
+## Состояние гонки (Race Condition)
+- Ошибка проектирования многопоточной системы, при которой результат работы программы зависит от последовательности выполнения потоков
+- Возникает при одновременном доступе нескольких потоков к общему изменяемому ресурсу
+- Пример: операция `counter++` (не атомарна: чтение-изменение-запись)
+
+## Синхронизация потоков
+- Механизм гарантирующий, что только один поток в момент времени может получить доступ к критической секции
+- Цель: обеспечить целостность данных и избежать состояния гонки
+
+## Монитор (Monitor)
+- Высокоуровневый механизм синхронизации
+- В Java каждый объект имеет связанный с ним монитор (intrinsic lock/mutex)
+- Поток должен "захватить" монитор перед выполнением защищенного кода
+
+## Модификатор synchronized
+
+### Синхронизированный метод
+```java
+public class Counter {
+    private int count = 0;
+    
+    public synchronized void increment() {
+        count++;  // Только один поток может выполнять этот метод
+    }
+}
+```
+
+### Синхронизированный блок
+```java
+public class SomeClass {
+    private final Object lock = new Object();
+
+    public void doWork() {
+        // Несинхронизированный код
+        
+        synchronized (lock) {
+            // Критическая секция
+        }
+        
+        // Другой код
+    }
+}
+```
+
+---
+
+# 26. Многопоточность. Интерфейсы Executor, ExecutorService, Callable, Future
+
+## Executor Framework (java.util.concurrent)
+
+### Интерфейсы:
+1. **Executor**:
+   - Простой интерфейс с методом `void execute(Runnable command)`
+   - Отделяет задачу (что сделать) от исполнителя (как сделать)
+
+2. **ExecutorService** (расширяет Executor):
+   - Добавляет управление жизненным циклом и обработку результатов
+   - Основные методы:
+     - `Future<?> submit(Runnable task)`
+     - `Future<T> submit(Callable<T> task)`
+     - `void shutdown()`
+     - `List<Runnable> shutdownNow()`
+
+3. **Callable<V>**:
+   - Аналог Runnable, но возвращает результат и может бросать исключения
+   - Метод `V call() throws Exception`
+
+4. **Future<V>**:
+   - Представляет результат асинхронного вычисления
+   - Методы:
+     - `V get()` (блокирующий)
+     - `V get(long timeout, TimeUnit unit)`
+     - `boolean isDone()`
+     - `boolean cancel(boolean mayInterruptIfRunning)`
+
+### Пример:
+```java
+ExecutorService executor = Executors.newSingleThreadExecutor();
+Callable<String> task = () -> {
+    Thread.sleep(2000);
+    return "Результат";
+};
+
+Future<String> future = executor.submit(task);
+
+// Основной поток продолжает работу
+System.out.println("Задача выполняется...");
+
+try {
+    String result = future.get();  // Блокируемся до получения результата
+    System.out.println("Результат: " + result);
+} catch (Exception e) {
+    e.printStackTrace();
+}
+
+executor.shutdown();
+```
+
+---
+
+# 27. Класс Executors и интерфейс ExecutorService. Пулы потоков.
+
+## Пулы потоков (Thread Pools)
+- Набор заранее созданных потоков для выполнения задач
+- Преимущества:
+  - Снижение накладных расходов
+  - Управление ресурсами
+  - Упрощение управления
+
+## Основные типы пулов (через `Executors`):
+
+1. **newFixedThreadPool(int nThreads)**:
+   - Фиксированное количество потоков
+   - Неограниченная очередь ожидания
+
+2. **newCachedThreadPool()**:
+   - Гибкий пул (создает потоки по необходимости)
+   - Удаляет простаивающие потоки через 60 секунд
+
+3. **newSingleThreadExecutor()**:
+   - Один поток (последовательное выполнение задач)
+
+4. **newScheduledThreadPool(int corePoolSize)**:
+   - Пул для выполнения задач по расписанию
+
+## Жизненный цикл ExecutorService:
+```java
+ExecutorService executor = Executors.newFixedThreadPool(4);
+
+// Отправка задач
+executor.submit(() -> System.out.println("Task 1"));
+executor.submit(() -> System.out.println("Task 2"));
+
+// Завершение
+executor.shutdown();
+try {
+    if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {
+        executor.shutdownNow();
+    }
+} catch (InterruptedException e) {
+    executor.shutdownNow();
+    Thread.currentThread().interrupt();
+}
+```
+
+---
+
+# 28. Модель памяти, кэширование. Модификатор volatile и условие "happens-before".
+
+## Модель памяти Java (JMM)
+- Определяет взаимодействие потоков через общую память
+- Проблема: кэширование значений процессором → проблема видимости изменений
+
+## Модификатор volatile
+- Гарантии:
+  1. **Видимость**: изменения сразу видны всем потокам
+  2. **Упорядочивание**: запрет переупорядочивания операций
+
+- Ограничение: не обеспечивает атомарность сложных операций
+
+## Отношение "happens-before"
+- Определяет порядок выполнения операций
+- Основные правила:
+  - Действия в одном потоке упорядочены по коду
+  - Освобождение монитора → последующий захват
+  - Запись volatile → последующее чтение
+  - `start()` → действия в новом потоке
+  - Действия в потоке → успешный `join()`
+
+---
+
+# 29. Взаимодействие потоков. Ожидание и нотификация. Методы wait(), notify(), notifyAll().
+
+## Основные методы:
+- `wait()`: освобождает монитор и переводит поток в WAITING
+- `notify()`: будит один случайный ожидающий поток
+- `notifyAll()`: будит все ожидающие потоки
+
+## Шаблон "Guarded Blocks":
+```java
+synchronized (lock) {
+    while (!condition) {  // Всегда в цикле (spurious wakeup)
+        lock.wait();
+    }
+    // Выполнение при выполнении условия
+}
+```
+
+## Пример Producer-Consumer:
+```java
+public class SharedQueue {
+    private final Queue<Integer> queue = new LinkedList<>();
+    private final int CAPACITY = 5;
+    private final Object lock = new Object();
+
+    public void produce(int item) throws InterruptedException {
+        synchronized (lock) {
+            while (queue.size() == CAPACITY) {
+                lock.wait();
+            }
+            queue.add(item);
+            lock.notifyAll();
+        }
+    }
+
+    public int consume() throws InterruptedException {
+        synchronized (lock) {
+            while (queue.isEmpty()) {
+                lock.wait();
+            }
+            int item = queue.poll();
+            lock.notifyAll();
+            return item;
+        }
+    }
+}
+```
+
+---
+
+# 30. Интерфейсы Lock, ReadWriteLock, Condition и реализующие их классы.
+
+## Интерфейс Lock
+- Альтернатива `synchronized`
+- Реализация: `ReentrantLock`
+- Пример:
+```java
+Lock lock = new ReentrantLock();
+lock.lock();
+try {
+    // Критическая секция
+} finally {
+    lock.unlock();
+}
+```
+
+## Интерфейс ReadWriteLock
+- Реализация: `ReentrantReadWriteLock`
+- Разделение блокировок:
+  - Чтение: несколько потоков
+  - Запись: эксклюзивный доступ
+- Пример:
+```java
+ReadWriteLock rwLock = new ReentrantReadWriteLock();
+Lock readLock = rwLock.readLock();
+Lock writeLock = rwLock.writeLock();
+```
+
+## Интерфейс Condition
+- Альтернатива `wait/notify`
+- Пример:
+```java
+Lock lock = new ReentrantLock();
+Condition condition = lock.newCondition();
+
+lock.lock();
+try {
+    while (!conditionMet) {
+        condition.await();
+    }
+    // Действия
+    condition.signalAll();
+} finally {
+    lock.unlock();
+}
+```
