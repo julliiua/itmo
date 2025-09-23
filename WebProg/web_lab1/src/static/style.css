@@ -1,0 +1,227 @@
+body {
+    background-color: #f8f5f0;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* шапка */
+header.header {
+    width: 100%;
+    background-color: #e0d9cf;
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header.header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+header.header p {
+    font-size: 0.9rem;
+    margin: 2px 0;
+}
+
+
+.page {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 0 20px 20px 20px;
+}
+
+/* клонки */
+.left-panel, .middle-panel, .right-panel {
+    background-color: #fffdf9;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.left-panel {
+    flex: 1;
+}
+
+/* таблица */
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 600px;
+}
+
+.canvas-container {
+    width: 100%;
+    height: 100%;
+}
+
+.table-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(45px * 6);
+}
+
+#result-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Georgia, serif;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+#result-table thead th{
+    background-color: #e0d9cf;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    background-clip: padding-box;
+    top: 0;
+    z-index: 1;
+
+    position: sticky;
+}
+
+#result-table th, #result-table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#result-table tbody tr {
+    background-color: #f8f5f0;
+}
+
+#result-table tbody tr:hover {
+    background-color: #e9e4dd;
+}
+
+
+#result-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#result-table th:nth-child(1) { width: 10%; } /* колонка x */
+#result-table th:nth-child(2) { width: 10%; } /* колонка y */
+#result-table th:nth-child(3) { width: 10%; } /* колонка r */
+#result-table th:nth-child(4) { width: 25%; } /* Время */
+#result-table th:nth-child(5) { width: 25%; } /* Время выполнения */
+#result-table th:nth-child(6) { width: 20%; } /* Результат */
+
+
+/* Форма */
+.input-section h2 {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    transform: scale(1);
+}
+
+/* Кнопки */
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Georgia, serif;
+}
+
+.submit-btn {
+    background-color: #a3b18a;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #8d9c75;
+}
+
+.reset-btn {
+    background-color: #d88c8c;
+    color: white;
+    margin-left: 10px;
+}
+
+.reset-btn:hover {
+    background-color: #c27676;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fffdf9;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close-button {
+    color: #888;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+.error-message {
+    color: #d88c8c;
+    font-weight: bold;
+    margin-top: 8px;
+    text-align: center;
+}

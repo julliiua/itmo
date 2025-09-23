@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №1</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-content">
+        <h1 class="header-title">Лабораторная работа №1</h1>
+        <div class="student-info">
+            <p>Студент: Зубулина Юлия Максимовна</p>
+            <p>Группа: P3212</p>
+            <p>Вариант: 465987</p>
+        </div>
+    </div>
+</header>
+
+<main class="page">
+    <div class="left-panel">
+        <section class="input-section">
+            <form id="pointForm" class="point-form">
+                <h2>Проверка попадания точки в область</h2>
+
+                <div class="form-group">
+                    <label>Координата X:</label>
+                    <div class="checkbox-group" id="x-group">
+                        <label><input type="checkbox" name="x" value="-4"> -4</label>
+                        <label><input type="checkbox" name="x" value="-3"> -3</label>
+                        <label><input type="checkbox" name="x" value="-2"> -2</label>
+                        <label><input type="checkbox" name="x" value="-1"> -1</label>
+                        <label><input type="checkbox" name="x" value="0"> 0</label>
+                        <label><input type="checkbox" name="x" value="1"> 1</label>
+                        <label><input type="checkbox" name="x" value="2"> 2</label>
+                        <label><input type="checkbox" name="x" value="3"> 3</label>
+                        <label><input type="checkbox" name="x" value="4"> 4</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="y">Координата Y:</label>
+                    <input type="text" id="y" name="y" placeholder="Введите Y от -5 до 5" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Радиус R:</label>
+                    <div class="checkbox-group" id="r-group">
+                        <label><input type="checkbox" name="r" value="1"> 1</label>
+                        <label><input type="checkbox" name="r" value="1.5"> 1.5</label>
+                        <label><input type="checkbox" name="r" value="2"> 2</label>
+                        <label><input type="checkbox" name="r" value="2.5"> 2.5</label>
+                        <label><input type="checkbox" name="r" value="3"> 3</label>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn">Проверить</button>
+                    <button type="reset" class="reset-btn">Сбросить</button>
+                </div>
+            </form>
+
+            <div id="error" class="error-message" hidden></div>
+        </section>
+    </div>
+
+    <div class="middle-panel">
+        <div class="canvas-container">
+            <canvas id="graph" width="300" height="300"></canvas>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <section class="results-section">
+            <h2>Результаты</h2>
+            <div class="table-container">
+                <table id="result-table">
+                    <thead>
+                    <tr>
+                        <th>x</th>
+                        <th>y</th>
+                        <th>r</th>
+                        <th>Время</th>
+                        <th>Время выполнения</th>
+                        <th>Результат</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</main>
+
+<div id="error-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <p id="modal-error-message"></p>
+    </div>
+</div>
+
+</body>
+</html>
