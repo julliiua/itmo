@@ -1,81 +1,434 @@
 body {
-    background: #f8f5f0;
-    font-family: Georgia, serif;
+    background-color: #f8f5f0;
     color: #333;
+    line-height: 1.5;
     margin: 0;
-    padding: 0;
-}
-.header {
-    text-align: center;
     padding: 20px;
-    background: #fffdf9;
-    border-bottom: 2px solid #a3b18a;
-    margin-bottom: 20px;
+    font-family: Georgia, serif;
 }
-.page {
-    display: flex;
-    max-width: 1200px;
+
+.container {
+    max-width: 1400px;
     margin: 0 auto;
-    gap: 20px;
-    padding: 20px;
-    min-height: 70vh;
-}
-.left-panel, .right-panel {
     background: #fffdf9;
     border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.header {
+    background-color: #e0d9cf;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.header h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.header p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
-.left-panel {
+
+.form-section {
     flex: 1;
+    background: #f8f5f0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0d9cf;
 }
-.right-panel {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.graph-section {
+    flex: 2;
+    background: #f8f5f0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0d9cf;
+    text-align: center;
 }
-.checkbox-group {
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* радио кнопки как чекбоксы в первой лабе */
+.radio-group {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 20px;
 }
-.checkbox-group label {
+
+.radio-group label {
     display: flex;
     align-items: center;
     gap: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 6px 10px;
+    background-color: #fffdf9;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
 }
+
+.radio-group label:hover {
+    background-color: #e9e4dd;
+    border-color: #a3b18a;
+}
+
+.radio-group input[type="radio"] {
+    transform: scale(1);
+    margin: 0;
+}
+
+.radio-group input[type="radio"]:checked + span {
+    color: #a3b18a;
+    font-weight: bold;
+}
+
 input[type="text"] {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
     border-radius: 6px;
-    margin-bottom: 20px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
 }
-.submit-btn {
-    background-color: #a3b18a;
-    color: white;
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #a3b18a;
+    box-shadow: 0 0 0 2px rgba(163, 177, 138, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
     border: none;
     border-radius: 6px;
-    padding: 12px 24px;
+    font-size: 0.95rem;
     cursor: pointer;
-    font-size: 16px;
-    width: 100%;
+    transition: 0.3s;
+    font-family: Georgia, serif;
+    background-color: #a3b18a;
+    color: white;
 }
-.submit-btn:hover {
+
+button:hover {
     background-color: #8d9c75;
+    transform: translateY(-1px);
 }
-.graph-container {
-    position: relative;
-    width: 400px;
-    height: 400px;
+
+.results-link {
+    display: inline-block;
+    background-color: #d4b896;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
+
+.results-link:hover {
+    background-color: #c4a886;
+    transform: translateY(-1px);
+}
+
+/* график */
 #graph {
-    border: 1px solid #a3b18a;
+    border: 2px solid #a3b18a;
     border-radius: 8px;
     cursor: crosshair;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
 }
+
+
+.graph-info {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.graph-info.success {
+    background: #e8f5e8;
+    color: #2d5016;
+    border: 1px solid #c3e6cb;
+}
+
+.graph-info.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fffdf9;
+    margin: 15% auto;
+    padding: 25px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.close-button {
+    color: #888;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #d88c8c;
+    font-weight: normal;
+}
+
+.modal-content p {
+    margin: 15px 0;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+/* Стили для страницы результатов */
+.results-summary {
+    margin-bottom: 30px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid #a3b18a;
+}
+
+.stat-card.hit {
+    border-left-color: #588157;
+}
+
+.stat-card.miss {
+    border-left-color: #d88c8c;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.table-wrapper {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Улучшенная таблица */
+#result-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Georgia, serif;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+#result-table thead th {
+    background-color: #e0d9cf;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    background-clip: padding-box;
+    top: 0;
+    z-index: 1;
+    position: sticky;
+}
+
+#result-table th, #result-table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#result-table tbody tr {
+    background-color: #f8f5f0;
+}
+
+#result-table tbody tr:hover {
+    background-color: #e9e4dd;
+}
+
+#result-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#result-table th:nth-child(1) { width: 10%; }
+#result-table th:nth-child(2) { width: 10%; }
+#result-table th:nth-child(3) { width: 10%; }
+#result-table th:nth-child(4) { width: 25%; }
+#result-table th:nth-child(5) { width: 25%; }
+#result-table th:nth-child(6) { width: 20%; }
+
+
+/* Стили для ячеек */
+.row-number {
+    font-weight: bold;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.coordinates {
+    text-align: left;
+}
+
+.coord-pair {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 0;
+}
+
+.coord-label {
+    font-weight: 600;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.coord-value {
+    font-weight: bold;
+    color: #333;
+}
+
+.timestamp {
+    font-size: 0.8rem;
+}
+
+.time {
+    font-weight: bold;
+    color: #333;
+}
+
+.date {
+    color: #666;
+    margin-top: 2px;
+}
+
+.actions {
+    text-align: center;
+}
+
+.action-btn {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: auto;
+    margin: 0;
+}
+
+.action-btn:hover {
+    background: #a3b18a;
+    color: white;
+    transform: scale(1.1);
+}
+
+.retry-btn:hover {
+    background: #a3b18a;
+}
+
+/* Стили для пустой истории */
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.no-results-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.no-results h2 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.no-results p {
+    color: #888;
+    margin-bottom: 30px;
+}
+

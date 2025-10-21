@@ -9,6 +9,7 @@ const state = {
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
 });
+
 canvas.addEventListener("click", function(e) {
     const rSelected = document.querySelector('input[name="r"]:checked');
     if (!rSelected) { alert("Select R first!"); return; }

@@ -11,109 +11,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Проверка попадания точки</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f5f5f5;
-        }
-        .header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        .container {
-            display: flex;
-            gap: 20px;
-        }
-        .form-section {
-            flex: 1;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .graph-section {
-            flex: 2;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .results-section {
-            margin-top: 20px;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .radio-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .radio-group label {
-            display: flex;
-            align-items: center;
-            font-weight: normal;
-        }
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-        .error {
-            color: #e74c3c;
-            font-size: 12px;
-            margin-top: 5px;
-        }
-        #graph {
-            border: 1px solid #ddd;
-            cursor: crosshair;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .hit { color: green; font-weight: bold; }
-        .miss { color: red; font-weight: bold; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
         <h1>Проверка попадания точки в область</h1>
-        <p>Зубулина Юлия Максимовна | Группа 3212 | Вариант 468296</p>
+        <h1>Лабораторная работа №2</h1>
+        <p>Зубулина Юлия Максимовна <p>
+        </p> Группа 3212 <p>
+        </p> Вариант 468296</p>
     </div>
 
     <div class="container">
@@ -163,41 +69,47 @@
             <div id="graph-info"></div>
         </div>
     </div>
+    <!-- Модальное окно для ошибок -->
+    <div id="error-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Ошибка валидации</h3>
+            <p id="modal-error-message"></p>
+        </div>
+    </div>
 
-    <div class="results-section">
-        <h3>Результаты предыдущих проверок</h3>
-        <table id="resultsTable">
+    <div class="table-wrapper" style="margin-top: 40px;">
+        <h2>История проверок</h2>
+        <table id="result-table">
             <thead>
                 <tr>
+                    <th>№</th>
                     <th>X</th>
                     <th>Y</th>
                     <th>R</th>
                     <th>Результат</th>
-                    <th>Время</th>
+                    <th>Время проверки</th>
                 </tr>
             </thead>
             <tbody>
                 <%
-                    List<Point> results = (List<Point>) application.getAttribute("results");
+                    List<yuliya.model.Point> results = (List<yuliya.model.Point>) application.getAttribute("results");
                     if (results != null && !results.isEmpty()) {
-                        for (Point point : results) {
+                        int i = 1;
+                        for (yuliya.model.Point point : results) {
                 %>
-                    <tr>
-                        <td><%= point.getX() %></td>
-                        <td><%= point.getY() %></td>
-                        <td><%= point.getR() %></td>
-                        <td class="<%= point.getHitClass() %>">
-                            <%= point.getHitText() %>
-                        </td>
-                        <td><%= point.getTimestamp() %></td>
-                    </tr>
+                <tr class="row-<%= point.getHitClass() %>">
+                    <td class="row-number"><%= i++ %></td>
+                    <td class="coordinates"><span class="coord-value"><%= point.getX() %></span></td>
+                    <td class="coordinates"><span class="coord-value"><%= point.getY() %></span></td>
+                    <td class="radius-value"><span class="r-badge"><%= point.getR() %></span></td>
+                    <td><span class="result-badge <%= point.getHitClass() %>"><%= point.getHitText() %></span></td>
+                    <td class="timestamp"><span class="time"><%= point.getTimestamp() %></span></td>
+                </tr>
                 <%
                         }
                     } else {
                 %>
-                    <tr>
-                        <td colspan="5">Нет данных</td>
-                    </tr>
                 <%
                     }
                 %>
@@ -206,55 +118,100 @@
     </div>
 
     <script>
-        // Валидация формы
-        document.getElementById('pointForm').addEventListener('submit', function(e) {
-            let isValid = true;
-
-            // Проверка X
-            const xSelected = document.querySelector('input[name="x"]:checked');
-            if (!xSelected) {
-                document.getElementById('x-error').textContent = 'Выберите значение X';
-                isValid = false;
-            } else {
-                document.getElementById('x-error').textContent = '';
-            }
-
-            // Проверка Y
-            const yInput = document.getElementById('y');
-            const yValue = parseFloat(yInput.value);
-            if (isNaN(yValue) || yValue < -3 || yValue > 3) {
-                document.getElementById('y-error').textContent = 'Введите число от -3 до 3';
-                isValid = false;
-            } else {
-                document.getElementById('y-error').textContent = '';
-            }
-
-            // Проверка R
-            const rSelected = document.querySelector('input[name="r"]:checked');
-            if (!rSelected) {
-                document.getElementById('r-error').textContent = 'Выберите значение R';
-                isValid = false;
-            } else {
-                document.getElementById('r-error').textContent = '';
-            }
-
-            if (!isValid) {
-                e.preventDefault();
-            }
-        });
-
-        // График
+        // Состояние приложения
+        const state = {
+            x: NaN,
+            y: NaN,
+            r: 3.0
+        };
         const canvas = document.getElementById('graph');
         const ctx = canvas.getContext('2d');
         const graphInfo = document.getElementById('graph-info');
 
+        // Валидация Y
+        document.getElementById("y").addEventListener("input", (ev) => {
+            const input = ev.target;
+            const value = input.value;
+            if (!/^[-+]?\d*\.?\d+$/.test(value) && value !== "") {
+                showError("Y должен быть числом! Дробные числа вводить через точку");
+                state.y = NaN;
+            } else {
+                state.y = parseFloat(value);
+                hideError();
+            }
+        });
+
+        // Валидация X
+        document.getElementById("x-group").addEventListener("change", (e) => {
+            if (e.target.type === 'radio') {
+                state.x = parseFloat(e.target.value);
+                hideError();
+            }
+        });
+
+        // Валидация R
+        document.getElementById("r-group").addEventListener("change", (e) => {
+            if (e.target.type === 'radio') {
+                state.r = parseFloat(e.target.value);
+                hideError();
+
+                // Обновляем график при выборе R
+                drawGraph(state.r);
+            }
+        });
+
+        function validateState() {
+            if (isNaN(state.y) || state.y < -3 || state.y > 3) {
+                showError("Y должен быть числом от -3 до 3");
+                return false;
+            }
+            if (isNaN(state.x)) {
+                showError("X не выбран, выберите X");
+                return false;
+            }
+            if (isNaN(state.r) || state.r < 1 || state.r > 3) {
+                showError("R не выбран, выберите R");
+                return false;
+            }
+            return true;
+        }
+
+        function showError(message) {
+            const modal = document.getElementById("error-modal");
+            const modalMessage = document.getElementById("modal-error-message");
+            const closeButton = modal.querySelector(".close-button");
+
+            modalMessage.textContent = message;
+            modal.style.display = "block";
+
+            closeButton.onclick = () => {
+                modal.style.display = "none";
+            };
+
+            window.onclick = (event) => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        }
+
+        function hideError() {
+            document.getElementById("error-modal").style.display = "none";
+        }
+
+        // Обработка отправки формы
+        document.getElementById('pointForm').addEventListener('submit', function(e) {
+            if (!validateState()) {
+                e.preventDefault();
+            }
+        });
         function drawGraph(r) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             // Настройки
             const centerX = canvas.width / 2;
             const centerY = canvas.height / 2;
-            const scale = 40; // пикселей на единицу
+            const scale = 40;
 
             // Сетка и оси
             ctx.strokeStyle = '#ccc';
@@ -277,7 +234,7 @@
             }
 
             // Оси
-            ctx.strokeStyle = '#000';
+            ctx.strokeStyle = '#2c3e50';
             ctx.lineWidth = 2;
 
             // Ось X
@@ -360,28 +317,23 @@
                 ctx.fill();
                 ctx.stroke();
             }
-
-
-            // Отрисовка существующих точек
-            <%
-                List<Point> pointResults = (List<Point>) application.getAttribute("results");
-                if (pointResults != null) {
-                    for (Point point : pointResults) {
-                        String currentR = request.getParameter("r");
-                        if (currentR != null && !currentR.isEmpty()) {
-                            double rValue = Double.parseDouble(currentR);
-                            if (point.getR() == rValue) {
-            %>
-                drawPoint(<%= point.getX() %>, <%= point.getY() %>, <%= point.isHit() %>, <%= rValue %>);
-            <%
-                            }
-                        }
-                    }
-                }
-            %>
         }
 
-        function drawPoint(x, y, isHit, r) {
+
+        // Отрисовка существующих точек
+        function drawExistingPoints(currentR) {
+            // Используем данные из скрытого поля или localStorage
+            const savedResults = localStorage.getItem('graphPoints');
+            if (savedResults) {
+                const points = JSON.parse(savedResults);
+                points.forEach(point => {
+                    if (Math.abs(point.r - currentR) < 0.001) {
+                        drawPoint(point.x, point.y, point.hit);
+                    }
+                });
+            }
+        }
+        function drawPoint(x, y, isHit) {
             const centerX = canvas.width / 2;
             const centerY = canvas.height / 2;
             const scale = 40;
@@ -389,19 +341,25 @@
             const pointX = centerX + x * scale;
             const pointY = centerY - y * scale;
 
-            ctx.fillStyle = isHit ? 'green' : 'red';
+            // Рисуем точку
+            ctx.fillStyle = isHit ? '#588157' : '#d88c8c';
             ctx.beginPath();
-            ctx.arc(pointX, pointY, 4, 0, Math.PI * 2);
+            ctx.arc(pointX, pointY, 5, 0, Math.PI * 2);
             ctx.fill();
+
+            ctx.strokeStyle = '#2c3e50';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(pointX, pointY, 5, 0, Math.PI * 2);
+            ctx.stroke();
         }
 
         // Обработка клика по графику
         canvas.addEventListener('click', function(e) {
-            const rSelected = document.querySelector('input[name="r"]:checked');
-
-            if (!rSelected) {
+            if (isNaN(state.r)) {
                 graphInfo.textContent = 'Сначала выберите радиус R';
-                graphInfo.style.color = 'red';
+                graphInfo.className = 'graph-info error';
+                showError("Сначала выберите радиус R");
                 return;
             }
 
@@ -412,34 +370,111 @@
             const centerX = canvas.width / 2;
             const centerY = canvas.height / 2;
             const scale = 40;
-            const r = parseFloat(rSelected.value);
 
-            // Преобразование координат
             const graphX = (x - centerX) / scale;
             const graphY = (centerY - y) / scale;
 
-            // Округление до 2 знаков
             const roundedX = Math.round(graphX * 100) / 100;
             const roundedY = Math.round(graphY * 100) / 100;
 
-            // Установка значений в форму
-            document.querySelector(`input[name="x"][value="${roundedX}"]`).checked = true;
-            document.getElementById('y').value = roundedY;
-
-            // Отправка формы
-            document.getElementById('pointForm').submit();
+            // Отправляем запрос на сервер
+            checkPointOnServer(roundedX, roundedY, state.r);
         });
 
-        // Обновление графика при изменении R
-        document.querySelectorAll('input[name="r"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                drawGraph(parseFloat(this.value));
-                graphInfo.textContent = '';
+        // Функция для отправки запроса на сервер
+        function checkPointOnServer(x, y, r) {
+            // Создаем форму для отправки
+            const formData = new FormData();
+            formData.append('x', x);
+            formData.append('y', y);
+            formData.append('r', r);
+
+            // Отправляем GET запрос (как в форме)
+            const params = new URLSearchParams();
+            params.append('x', x);
+            params.append('y', y);
+            params.append('r', r);
+
+            fetch('controller?' + params.toString(), {
+                method: 'GET'
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
+                }
+                throw new Error('Ошибка сервера');
+            })
+            .then(html => {
+                // Парсим ответ чтобы получить результат
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+
+                // Ищем результат на странице
+                const resultElement = doc.querySelector('.hit, .miss');
+                let isHit = false;
+
+                if (resultElement) {
+                    isHit = resultElement.classList.contains('hit');
+
+                    // Сохраняем точку в localStorage
+                    savePointToStorage(x, y, r, isHit);
+
+                    // Перерисовываем график с новой точкой
+                    drawGraph(r);
+                    drawPoint(x, y, isHit);
+                    drawExistingPoints(r);
+
+                    // Обновляем таблицу на странице результатов
+                    setTimeout(() => {
+                        window.location.href = 'result.jsp';
+                    }, 1500);
+
+                } else {
+                    throw new Error('Не удалось определить результат');
+                }
+            })
+            .catch(error => {
+                graphInfo.textContent = 'Ошибка при проверке точки';
+                graphInfo.className = 'graph-info error';
+                showError(error.message);
             });
+        }
+
+        // Сохранение точки в localStorage
+        function savePointToStorage(x, y, r, hit) {
+            const points = JSON.parse(localStorage.getItem('graphPoints') || '[]');
+            points.push({ x, y, r, hit, timestamp: new Date().toISOString() });
+            localStorage.setItem('graphPoints', JSON.stringify(points));
+        }
+        document.getElementById("r-group").addEventListener("change", (e) => {
+            if (e.target.type === 'radio') {
+                state.r = parseFloat(e.target.value);
+                hideError();
+
+                //Сохраняем выбранный радиус в localStorage
+                localStorage.setItem('selectedR', state.r);
+
+                drawGraph(state.r);
+            }
         });
 
-        // Инициализация графика
-        drawGraph(null);
+        function initGraph() {
+            const savedR = localStorage.getItem('selectedR');
+            if (savedR) {
+                state.r = parseFloat(savedR);
+
+                const radio = document.querySelector(`input[name="r"][value="${savedR}"]`);
+                if (radio) radio.checked = true;
+
+                drawGraph(state.r);
+                drawExistingPoints(state.r);
+            } else {
+                drawGraph(null);
+            }
+        }
+
+    // Запускаем инициализацию при загрузке страницы
+    document.addEventListener('DOMContentLoaded', initGraph);
     </script>
 </body>
 </html>
