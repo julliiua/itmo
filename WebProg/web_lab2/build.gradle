@@ -1,0 +1,65 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group = 'ru.zybulina'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Используйте Jakarta Servlet API для WildFly 37+
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+    compileOnly 'jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.1.0'
+
+    // JSTL для Jakarta
+    implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
+    implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1'
+}
+
+war {
+    archiveFileName = 'area-check.war'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+/*plugins {
+    id 'java'
+    id 'war'
+}
+
+group = 'yuliya'
+version = '1.0'
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'jakarta.platform:jakarta.jakartaee-api:8.0.0'
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+}
+
+war {
+    archiveFileName = "web_lab2.war"
+}
+
+// Задача для деплоя
+ask deployToWildFly(type: Copy) {
+    dependsOn build
+    from 'build/libs'
+    into 'C:/Users/79526/Downloads/wildfly-37.0.1.Final/wildfly-37.0.1.Final/standalone/deployments'
+    include '*.war'
+}
+*/
