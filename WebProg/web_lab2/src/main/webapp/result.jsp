@@ -30,12 +30,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>${result.x}</td>
-                        <td>${result.y}</td>
-                        <td>${result.r}</td>
-                        <td class="${result.hitClass}">${result.hitText}</td>
+                    <%
+                        Object attr = application.getAttribute("results");
+                        if (attr instanceof List<?>) {
+                            List<?> list = (List<?>) attr;
+                            if (!list.isEmpty() && list.get(list.size() - 1) instanceof Point) {
+                                Point point = (Point) list.get(list.size() - 1);
+                    %>
+                    <tr class="row-<%= point.getHitClass() %>">
+                        <td><%= point.getX() %></td>
+                        <td><%= point.getY() %></td>
+                        <td><%= point.getR() %></td>
+                        <td class="<%= point.getHitClass() %>"><%= point.getHitText() %></td>
                     </tr>
+                    <%
+                            }
+                        }
+                    %>
                 </tbody>
             </table>
 
