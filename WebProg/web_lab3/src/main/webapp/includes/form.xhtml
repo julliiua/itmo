@@ -1,0 +1,87 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/f/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+    <h:panelGroup styleClass="hit-form-wrapper" layout="block">
+        <h:form id="hit-form">
+            <p:remoteCommand
+                    name="canvasHandler"
+                    process="@this"
+                    update="hits-table"
+                    action="#{hitFormBean.submitPoint}">
+                <f:setPropertyActionListener target="#{hitFormBean.selectedX}" value="#{param.x}" />
+                <f:setPropertyActionListener target="#{hitFormBean.yCoordinate}" value="#{param.y}" />
+                <f:setPropertyActionListener target="#{hitFormBean.selectedR}" value="#{param.r}" />
+            </p:remoteCommand>
+            <h2>Параметры</h2>
+
+
+            <h:panelGroup styleClass="input-wrapper" layout="block">
+                <label for="x-slider">X:</label>
+                <div style="display: inline-block; width: 200px;">
+                    <p:slider id="x-slider"
+                              value="#{hitFormBean.selectedX}"
+                              for="xInput"
+                              minValue="-5"
+                              maxValue="5"
+                              step="1"
+                              range="false" />
+                    <p:inputText id="xInput"
+                                 value="#{hitFormBean.selectedX}"
+                                 style="width:40px; display:inline-block;" />
+                </div>
+                <h:message for="x-slider" style="color:red; display:block; min-height:1.2em;" />
+            </h:panelGroup>
+
+
+            <h:panelGroup styleClass="input-wrapper" layout="block">
+                <label for="yInput">Y (-3 ... 3):</label>
+                <p:inputText id="yInput"
+                             value="#{hitFormBean.yCoordinate}"
+                             required="true"
+                             placeholder="Введите Y"
+                             onkeypress="return /[0-9.\-]/.test(event.key)">
+                    <f:validateDoubleRange minimum="-3" maximum="3" />
+                </p:inputText>
+                <p:message for="yInput" />
+            </h:panelGroup>
+
+            <h:panelGroup styleClass="input-wrapper radius">
+                <label for="r-slider">R:</label>
+                <div style="display: inline-block; width: 200px;">
+                    <p:slider id="r-slider"
+                              value="#{hitFormBean.selectedR}"
+                              for="rInput"
+                              minValue="2"
+                              maxValue="5"
+                              step="0.1"
+                              range="false"
+                              onSlide="updateR(ui.value)">
+
+                        <p:ajax event="slideEnd" process="@this" />
+                    </p:slider>
+
+                    <p:inputText id="rInput"
+                                 value="#{hitFormBean.selectedR}"
+                                 style="width:40px; display:inline-block;"
+                                 oninput="updateR(this.value);" />
+                </div>
+                <h:message for="r-slider" style="color:red; display:block; min-height:1.2em;" />
+            </h:panelGroup>
+
+
+
+
+            <h:panelGroup styleClass="input-wrapper" layout="block">
+                <p:commandButton value="ПРОВЕРИТЬ"
+                                 action="#{hitFormBean.submit}"
+                                 process="@form"
+                                 update=":hits-table @form"
+                                 oncomplete="fillCanvas()"/>
+            </h:panelGroup>
+
+
+        </h:form>
+    </h:panelGroup>
+</ui:composition>

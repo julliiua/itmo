@@ -1,0 +1,498 @@
+/*
+ * =================================================================
+ * 1. Основные переменные и сброс (Reset)
+ * =================================================================
+ */
+:root {
+    /* Цветовая схема: Легкий и нейтральный, с зеленым акцентом */
+    --color-background: #f8f5f0; /* Светлый фон страницы */
+    --color-panel: #fffdf9;      /* Фон для блоков (Header, Top-Line, Form, Graph) */
+    --color-accent: #a3b18a;     /* Основной акцент (зеленовато-бежевый) */
+    --color-accent-dark: #8d9c75;/* Темный акцент для :hover */
+    --color-text: #333;          /* Основной цвет текста */
+    --color-light-text: #666;    /* Второстепенный цвет текста */
+    --color-border: #e0d9cf;     /* Цвет границ */
+
+    /* Дополнительные переменные, взятые из form.css для ошибок/кнопок */
+    --color-error: #E74C3C;      /* Ярко-красный для ошибок */
+    --color-dark-panel: #34495E; /* Более темный фон для контрастной таблицы */
+    --color-table-text: #ECF0F1; /* Светлый текст для темной таблицы */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+/* Сброс спин-кнопок для числовых полей */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.main-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0 10vh 0;
+}
+.start-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* вертикальное центрирование */
+    align-items: center;     /* горизонтальное центрирование */
+    min-height: 100vh;       /* 100% высоты окна браузера */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.right-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+
+/*
+ * =================================================================
+ * 2. Стили заголовка (Header)
+ * =================================================================
+ */
+/* Контейнер всей страницы */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 0 20px; /* внутренние отступы */
+}
+
+/* Сохраняем стиль header */
+header {
+    width: 600px;
+    margin: 0 auto;
+    background-color: var(--color-panel);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Заголовок */
+header .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+/* Подзаголовок */
+header .subtitle {
+    font-size: 1.5rem;
+    color: var(--color-light-text);
+}
+
+/* Информация о студенте */
+header .me-info h3,
+header .me-info h4 {
+    margin: 5px 0;
+    font-weight: normal;
+    color: var(--color-text);
+}
+
+header .controls {
+    margin-top: 20px; /* отступ после основной информации */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* центрируем текст и кнопку */
+    gap: 10px;           /* расстояние между временем и кнопкой */
+}
+
+
+.top {
+    width: 100%;
+    padding: 10px 0;       /* верх/низ внутренний */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* центрирование по горизонтали */
+    text-align: center;
+    background-color: transparent; /* убираем фон */
+    box-shadow: none;               /* убираем тень */
+}
+
+/* Подзаголовок полоски */
+.top header .subtitle {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;  /* нижний отступ */
+    color: var(--color-text);
+}
+
+/* Информация о студенте */
+.top header .me-info h3,
+.top header .me-info h4 {
+    margin: 5px 0;          /* одинаковые расстояния между строками */
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: var(--color-light-text);
+}
+
+/* Отступ между титульной информацией и кнопкой */
+.top + .button-container {
+    margin-top: 20px;  /* отступ сверху перед кнопкой */
+    display: flex;
+    justify-content: center;
+}
+/*
+ * =================================================================
+ * 3. Основной контент (График + Форма)
+ * =================================================================
+ */
+.top-line-container {
+    display: flex;
+    flex: 1;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+/*
+ * =================================================================
+ * 4. Стили графика (Graph)
+ * =================================================================
+ */
+.coordinate-plate-outer {
+    flex: 1; /* Используем flex для адаптивной ширины */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-panel);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: relative;
+    max-width: 50%; /* Ограничиваем для предотвращения чрезмерного растяжения */
+}
+
+.coordinate-plate-outer canvas {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: white;
+    cursor: crosshair;
+    display: block;
+}
+
+/* Tooltip для графика */
+.coordinate-plate-outer #tooltip {
+    position: absolute;
+    background-color: rgba(51, 51, 51, 0.85);
+    border-radius: 4px;
+    min-width: 120px;
+    color: var(--color-panel);
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    pointer-events: none;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+.coordinate-plate-outer #tooltip.hidden {
+    display: none;
+}
+
+
+/*
+ * =================================================================
+ * 5. Стили формы (Form)
+ * =================================================================
+ */
+.hit-form-wrapper {
+    flex: 1; /* Используем flex для адаптивной ширины */
+    padding: 20px;
+    background-color: var(--color-panel);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#hit-form {
+    width: 100%;
+
+}
+
+#hit-form h2 {
+    color: var(--color-accent-dark);
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#hit-form .input-wrapper {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#hit-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+/* Поля ввода */
+.ui-inputtext,
+#hit-form .input-wrapper > div > input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    background-color: white;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+.ui-inputtext:focus,
+#hit-form .input-wrapper > div > input[type="text"]:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+/* Слайдер */
+.ui-slider {
+    margin: 10px 0;
+    background-color: var(--color-border);
+    border: none;
+}
+.ui-slider .ui-slider-range {
+    background: var(--color-accent);
+}
+.ui-slider .ui-slider-handle {
+    background: var(--color-panel);
+    border: 2px solid var(--color-accent);
+}
+
+/*
+ * =================================================================
+ * 6. Стили кнопок
+ * =================================================================
+ */
+
+/* Кнопка "Go to start page" */
+.back-button,
+.main-page-button,
+.start-btn input[type="submit"] {
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: white;
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.back-button:hover,
+.main-page-button:hover,
+.start-btn input[type="submit"]:hover {
+    background-color: var(--color-accent-dark);
+    transform: translateY(-1px);
+}
+
+/* PrimeFaces CommandButton (ПРОВЕРИТЬ) */
+.ui-button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: 0.2s ease-in-out;
+}
+
+.ui-button-success {
+    background-color: var(--color-accent-dark) !important;
+    color: white !important;
+}
+
+.ui-button-success:hover {
+        background-color: var(--color-accent-dark);
+        transform: translateY(-1px);
+        color: white;
+}
+
+/*
+ * =================================================================
+ * 7. Стили таблицы (HitsTable)
+ * =================================================================
+ */
+.history-table-outer {
+    margin-top: 40px;
+    position: relative;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.history-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    overflow: hidden;
+    background-color: var(--color-dark-panel);
+    border-radius: 8px;
+}
+
+.history-table th {
+    height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-table-text);
+    border-bottom: 2px solid var(--color-error);
+}
+
+.history-table td {
+    color: var(--color-table-text);
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.history-table tr {
+    background-color: var(--color-dark-panel);
+    transition: 0.1s ease-in-out;
+}
+
+.history-table tr:hover {
+    background-color: color-mix(in srgb, var(--color-dark-panel), #ffffff 15%);
+    cursor: default;
+}
+
+/* Кнопка Очистить */
+.history-table-outer .clear-button {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    width: 100px;
+    height: 35px;
+    background: var(--color-dark-panel);
+    color: var(--color-table-text);
+    font-size: 14px;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s ease-in-out;
+    padding: 0;
+}
+
+.history-table-outer .clear-button:hover {
+    background: var(--color-error);
+    top: -47px;
+    height: 37px;
+}
+
+/* Стилизация иконки PrimeFaces */
+.history-table-outer .clear-button .pi {
+    font-size: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/*
+ * =================================================================
+ * 8. Сообщения об ошибках
+ * =================================================================
+ */
+.ui-message-error,
+.ui-state-error,
+.ui-message-error-icon,
+.ui-message-fatal-icon,
+#hit-form .input-wrapper > .ui-message {
+    color: var(--color-error) !important;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+    min-height: 1.2em;
+}
+
+
+
+.line-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 130px;
+}
+.right-block {
+    margin: 0 auto;            /* центр самого блока */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* вертикальное центрирование */
+    align-items: center;        /* горизонтальное центрирование содержимого */
+}
+}
+.right-block .ui-widget-header:first-child {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.right-block .ui-widget-header {
+    padding: 0;
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 30px;
+    font-weight: 400;
+    background: none;
+    color: var(--color-light);
+    border: none;
+}
+.back-button,
+.main-page-button,
+.start-btn input[type="submit"],
+input.main-page-button[type="submit"],
+input.back-button[type="submit"] {
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: white;
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.back-button:hover,
+.main-page-button:hover,
+.start-btn input[type="submit"]:hover,
+input.main-page-button[type="submit"]:hover,
+input.back-button[type="submit"]:hover {
+    background-color: var(--color-accent-dark);
+    transform: translateY(-1px);
+}
