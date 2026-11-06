@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2"><persistence-unit name="dragon" transaction-type="RESOURCE_LOCAL"><provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-<class>ru.itmo.model.Dragon</class><class>ru.itmo.model.DragonCave</class><class>ru.itmo.model.Person</class><class>ru.itmo.model.Team</class>
-<properties><property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/><property name="jboss.as.jpa.managed" value="false"/><property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect"/><property name="hibernate.hbm2ddl.auto" value="update"/></properties></persistence-unit></persistence>
